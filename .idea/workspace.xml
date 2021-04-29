@@ -78,7 +78,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1619719900775" />
+    <property name="settings.editor.selected.configurable" value="preferences.language.Kotlin" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -188,5 +189,9 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state width="1185" height="202" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1619641662215" />
+    <state x="266" y="109" key="SettingsEditor" timestamp="1619719922987">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="266" y="109" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1619719922987" />
   </component>
 </project>
