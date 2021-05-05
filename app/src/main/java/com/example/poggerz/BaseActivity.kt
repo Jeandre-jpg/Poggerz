@@ -15,13 +15,13 @@ open class BaseActivity : AppCompatActivity() {
         if(errorMessage) {
             snackBarView.setBackgroundColor(
                 ContextCompat.getColor(
-                    this, R.color.design_default_color_error
+                    this, R.color.red
                 )
             )
         } else {
             snackBarView.setBackgroundColor(
                 ContextCompat.getColor(
-                    this, R.color.design_default_color_secondary
+                    this, R.color.sea_foam
                 )
             )
         }

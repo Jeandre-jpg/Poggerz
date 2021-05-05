@@ -4,39 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AuthenticationActivity">
+    android:background="@color/white"
+    tools:context="com.example.poggerz.AuthenticationActivity">
 
     <LinearLayout
         android:id="@+id/ll_tab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_height="200dp"
         android:orientation="horizontal"
         android:gravity="center"
+        android:background="@drawable/new_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
-            android:gravity="center"
             android:id="@+id/tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="30dp"
-            android:textSize="24sp"
-            android:text="Login" />
+            android:fontFamily="@font/gorillaz_1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Sign In"
+            android:textColor="@color/own_black"
+            android:textSize="24sp" />
 
         <TextView
             android:gravity="center"
             android:id="@+id/tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="30dp"
+            android:padding="10dp"
+            android:textColor="@color/own_black"
+            android:fontFamily="@font/gorillaz_1"
             android:textSize="24sp"
             android:layout_weight="1"
             android:text="Register" />
+
     </LinearLayout>
 
     <FrameLayout

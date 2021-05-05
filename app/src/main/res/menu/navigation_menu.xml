@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/log_out"
+        android:icon="@drawable/ic_logout"
+        android:title="Log Out" />
+    <item
+        android:id="@+id/group_chat"
+        android:icon="@drawable/ic_group"
+        android:title="Group Chat" />
+    <item
+        android:id="@+id/individual_chats"
+        android:icon="@drawable/ic_individual_chat"
+        android:title="Individual Chats" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+</menu>

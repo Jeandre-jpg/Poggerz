@@ -4,67 +4,120 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.RegisterFragment">
+    tools:context="com.example.poggerz.fragments.RegisterFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Welcome to Poggerz, Let's Get Started!"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/own_black"
+        android:textSize="24sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="250dp"
+        android:textColorHint="@color/own_black"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/purple_700">
+        app:boxStrokeColor="@color/sea_foam">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Your Name"/>
+            android:gravity="center"
+            android:textColor="@color/own_black"
+            android:hint="Name"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="250dp"
+        android:textColorHint="@color/own_black"
+        android:layout_marginTop="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/purple_700">
+        app:boxStrokeColor="@color/sea_foam">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Your Email"/>
+            android:gravity="center"
+            android:textColor="@color/own_black"
+            android:hint="Email"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="250dp"
+        android:textColorHint="@color/own_black"
+        android:layout_marginTop="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/purple_700">
+        app:boxStrokeColor="@color/sea_foam">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColorHint="@color/own_black"
             android:inputType="textPassword"
-            android:hint="Your Password"/>
+            android:textColor="@color/own_black"
+            android:hint="Password"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_marginTop="30dp"
+        android:textColorHint="@color/own_black"
+        android:layout_marginTop="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/purple_700">
+        app:boxStrokeColor="@color/sea_foam">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_confirm_password"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:textColor="@color/own_black"
+            android:hint="Confirm Password"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="250dp"
+        android:textColorHint="@color/own_black"
+        android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        app:boxStrokeColor="@color/sea_foam">
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/age"
+            android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPassword"
-            android:hint="Confirm Your Password"/>
+            android:gravity="center"
+            android:textColor="@color/own_black"
+                android:hint="Age"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_register"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
+        android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:layout_marginTop="30dp"/>
+        android:fontFamily="@font/montserrat_regular"
+        android:textStyle="bold"
+        android:textColor="@color/own_white"
+        android:backgroundTint="@color/pink"
+        android:text="Sign Up"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>
