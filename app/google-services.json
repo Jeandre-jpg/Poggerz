@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "49376061791",
+    "project_id": "poggerz-e0b01",
+    "storage_bucket": "poggerz-e0b01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49376061791:android:87e42a19cda36f362aeeea",
+        "android_client_info": {
+          "package_name": "com.example.poggerz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49376061791-4o4dd2gf615et32qgort9f3328dptrb8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.poggerz",
+            "certificate_hash": "6d7f946c3f6bf56a1f575e8749f2fee1248df27a"
+          }
+        },
+        {
+          "client_id": "49376061791-29n68b0gd8skp8qnss8oioosbb045bm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXnENIv-2Bu-_4BujnbOz_fye4EjYt8XA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49376061791-29n68b0gd8skp8qnss8oioosbb045bm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
