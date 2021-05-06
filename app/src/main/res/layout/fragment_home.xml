@@ -1,13 +1,86 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.poggerz.fragments.HomeFragment">
+    android:background="@color/salmon"
+    tools:context="com.example.poggerz.fragments.HomeFragment" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/icon_2d_third" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="170dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/gorillaz_1"
+            android:textSize="50sp"
+            android:textColor="@color/own_black"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Welcome!" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="30dp">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="700dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:padding="30dp"
+        android:textColor="@color/own_black"
+        android:layout_weight="1"
+        android:text="Welcome to the official Poggerz website about all thing Gorillaz!" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/gorillaz_1"
+        android:textSize="50sp"
+        android:padding="30dp"
+        android:layout_marginTop="450dp"
+        android:textColor="@color/own_black"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:text="Start chatting today!" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:textStyle="bold"
+        android:backgroundTint="@color/pink"
+        android:text="Sign In"
+        android:layout_marginTop="50dp"/>
 
 </FrameLayout>
