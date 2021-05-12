@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.noted.R
+import com.example.poggerz.R
 import com.example.poggerz.AuthenticationActivity
 import kotlinx.android.synthetic.main.fragment_register.*
 import kotlinx.android.synthetic.main.fragment_register.view.*
@@ -24,8 +24,9 @@ class RegisterFragment : Fragment() {
         view.btn_register.setOnClickListener {
             var email: String = et_email.text.toString().trim{ it <= ' ' }
             var password: String = et_password.text.toString().trim{ it <= ' ' }
+            var name: String = et_name.text.toString()
 
-            (activity as AuthenticationActivity?)!!.registerUser(email, password)
+            (activity as AuthenticationActivity?)!!.registerUser(email, password, name)
         }
 
         return view

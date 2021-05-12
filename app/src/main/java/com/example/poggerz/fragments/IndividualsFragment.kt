@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.noted.R
+import com.example.poggerz.R
 
 class IndividualsFragment : Fragment() {
     // TODO: Rename and change types of parameters
