@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+
         val userId= intent.getStringExtra(Constants.LOGGED_IN_ID)
 
         if(userId != null){
@@ -28,34 +29,7 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         }else {
             startActivity(Intent(this, AuthenticationActivity::class.java))
         }
-
-
-//
-//
-//        //create list of notes
-//        var notesList = mutableListOf(
-//                Note("Note 1", false),
-//                Note("Note 2", true)
-//        )
-//
-//        //adapter
-//        val adapter = NoteAdapter(notesList)
-//        rv_notes.adapter = adapter
-//        rv_notes.layoutManager = LinearLayoutManager(this)
-//
-//        btn_add.setOnClickListener {
-//            val title = et_new_note.text.toString()
-//            val note = Note(title, false)
-//
-//            notesList.add(note)
-//
-//            //notify adapter
-//            adapter.notifyItemInserted(notesList.size - 1)
-//
-//            et_new_note.text.clear()
-//        }
-//
-
+        
 
 
         var toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close)
@@ -116,6 +90,8 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
 
         return true
     }
+
+
 
     fun setToolbarTitle(title:String){
         supportActionBar?.title = title

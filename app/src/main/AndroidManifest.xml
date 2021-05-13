@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Poggerz.NoActionBar">
         <activity android:name="com.example.poggerz.BaseActivity"></activity>
-      <activity android:name="com.example.poggerz.SplashActivity">
+      <activity android:name="com.example.poggerz.SplashActivity" android:theme="@style/Theme.Poggerz.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

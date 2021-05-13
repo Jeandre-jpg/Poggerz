@@ -1,4 +1,6 @@
 package com.example.poggerz.fragments
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,7 +22,16 @@ class LoginFragment : Fragment() {
             var password: String = et_password.text.toString().trim{ it <= ' ' }
 
             (activity as AuthenticationActivity?)!!.loginUser(email, password)
+
         }
+
+
+
+//        val btn_google = Intent(Intent.ACTION_VIEW, Uri.parse("https://myaccount.google.com/?utm_source=sign_in_no_continue"))
+//        startActivity(btn_google)
+//
+//        val btn_facebook = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/pages/Log-in-Facbook/164923830322211"))
+//        startActivity(btn_facebook)
 
 
         return view

@@ -20,10 +20,12 @@
         android:textSize="24sp"
         android:gravity="center_horizontal" />
 
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
+        android:layout_marginTop="10dp"
         android:textColorHint="@color/blue"
         app:boxStrokeColor="@color/sea_foam"
         android:backgroundTint="@color/own_black"
@@ -43,7 +45,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_width="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
         android:textColorHint="@color/blue"
         app:boxStrokeColor="@color/sea_foam"
         android:backgroundTint="@color/own_black"
@@ -63,7 +66,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_width="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
         android:textColorHint="@color/blue"
         app:boxStrokeColor="@color/sea_foam"
         android:backgroundTint="@color/own_black"
@@ -82,15 +86,16 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
         android:textColorHint="@color/blue"
         app:boxStrokeColor="@color/sea_foam"
         android:backgroundTint="@color/own_black"
         app:boxStrokeWidth="2dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_confirm_password"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             app:boxStrokeColor="@color/sea_foam"
@@ -103,7 +108,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_width="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
         android:textColorHint="@color/blue"
         app:boxStrokeColor="@color/sea_foam"
         android:backgroundTint="@color/own_black"
@@ -118,7 +124,7 @@
             android:backgroundTint="@color/own_black"
             app:boxStrokeWidth="2dp"
             android:textColor="@color/blue"
-                android:hint="Age"/>
+            android:hint="Age"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

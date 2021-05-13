@@ -36,13 +36,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/start_btn"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:background="#FFFFFF"
             android:fontFamily="@font/montserrat_regular"
             android:text="Start"
+            style="@style/Widget.MaterialComponents.Button"
+            app:cornerRadius="50dp"
             android:textColor="@color/own_white"
             android:textStyle="bold"
             app:backgroundTint="@color/army_green"
