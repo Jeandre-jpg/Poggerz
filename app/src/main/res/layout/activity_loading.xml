@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:padding="20dp"
+    tools:context="com.example.poggerz.SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/load"
+        android:layout_width="291dp"
+        android:layout_height="487dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.245"
+        app:srcCompat="@drawable/giphy" />
+
+    <LinearLayout
+
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/gorillaz_1"
+            android:textSize="50sp"
+            android:textColor="@color/own_black"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:text="Loading..." />
+
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Start"
+            android:textColor="@color/own_white"
+            android:textStyle="bold"
+            app:backgroundTint="@color/army_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="524dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,38 +14,41 @@ tools:context="com.example.poggerz.MainActivity">
 
 <com.google.android.material.navigation.NavigationView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="100dp"
     app:headerLayout="@layout/navigation_header"
     app:menu="@menu/navigation_menu"
     android:id="@+id/nav_menu"
     android:layout_gravity="start"/>
 
+<!--    <EditText-->
+<!--        android:id="@+id/et_new_note"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="New Note"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/btn_add"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_notes"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="400dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/et_new_note"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_notes"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/et_new_note"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/et_new_note"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="New Note"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_add"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+<!--    <Button-->
+<!--        android:id="@+id/btn_add"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:fontFamily="@font/montserrat_regular"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/own_black"-->
+<!--        android:backgroundTint="@color/blue"-->
+<!--        android:text="Add"-->
+<!--        android:layout_marginTop="600dp"/>-->
 </androidx.drawerlayout.widget.DrawerLayout>

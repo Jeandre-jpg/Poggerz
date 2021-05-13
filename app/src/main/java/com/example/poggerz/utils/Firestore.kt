@@ -30,14 +30,14 @@ class Firestore {
 
     }
 
-    fun getUserInfoById(activity: MainActivity, uid: String) {
+    fun getUserInfoById(activity: MainActivity, userId: String) {
 
-        val task = db.collection(Constants.USERS)
-                .document(uid)
+        db.collection(Constants.USERS)
+                .document(userId)
                 .get()
                 .addOnSuccessListener {document ->
                     if (document != null) {
-                        val user= document.toObject(User::class.java)!!
+                        val user = document.toObject(User::class.java)!!
                         activity.setUserInfo(user)
                     }else {
                         Toast.makeText(activity, "The user Info is empty", Toast.LENGTH_SHORT).show()

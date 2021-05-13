@@ -1,13 +1,122 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.poggerz.fragments.GroupsFragment">
+    android:background="@color/blue2"
+    tools:context="com.example.poggerz.fragments.GroupsFragment" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="30dp"
+        android:backgroundTint="@color/own_black"
+        android:background="@drawable/ic_back"/>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="350dp"
+        android:padding="30dp"
+        android:backgroundTint="@color/own_black"
+        android:background="@drawable/ic_settings"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="30dp"
+        android:background="@drawable/header_3"
+        android:layout_gravity="center_horizontal">
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:background="@color/own_black"
+        android:gravity="center"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-250dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/gorillaz_1"
+            android:gravity="center"
+            android:text="Chat with Groups!"
+            android:textColor="@color/army_green"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:background="@color/chocolate_brown"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="290dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+    <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/gorillaz_1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Messages"
+            android:textColor="@color/own_white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/own_white"
+            android:fontFamily="@font/gorillaz_1"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:background="@color/dark_brown"
+            android:text="Group Chats" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_tab" />
 
 </FrameLayout>

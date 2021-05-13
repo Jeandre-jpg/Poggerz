@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/own_black"
     tools:context=".AuthenticationActivity">
 
     <LinearLayout
         android:id="@+id/ll_tab"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="@drawable/new_header"
+        android:background="@drawable/header_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,11 +24,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginTop="80dp"
             android:fontFamily="@font/gorillaz_1"
             android:gravity="center"
             android:padding="10dp"
             android:text="Sign In"
-            android:textColor="@color/own_black"
+            android:textColor="@color/own_white"
             android:textSize="24sp" />
 
         <TextView
@@ -36,8 +37,9 @@
             android:id="@+id/tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
             android:padding="10dp"
-            android:textColor="@color/own_black"
+            android:textColor="@color/own_white"
             android:fontFamily="@font/gorillaz_1"
             android:textSize="24sp"
             android:layout_weight="1"

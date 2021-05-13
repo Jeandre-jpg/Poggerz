@@ -10,14 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Poggerz.NoActionBar">
         <activity android:name="com.example.poggerz.BaseActivity"></activity>
-      <activity android:name="com.example.poggerz.AuthenticationActivity">
+      <activity android:name="com.example.poggerz.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-     <activity android:name="com.example.poggerz.MainActivity">
+     <activity android:name="com.example.poggerz.LoadingActivity">
+        </activity>
+        <activity android:name="com.example.poggerz.AuthenticationActivity">
+        </activity>
+        <activity android:name="com.example.poggerz.MainActivity">
         </activity>
     </application>
 

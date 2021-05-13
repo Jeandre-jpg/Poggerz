@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/own_black"
     tools:context="com.example.poggerz.fragments.LoginFragment">
 
 
@@ -18,7 +18,8 @@
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="@color/own_black"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:gravity="center_horizontal" />
 
 <!--    <TextView-->
 <!--        android:id="@+id/textView2"-->
@@ -31,10 +32,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:textColorHint="@color/own_black"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/sea_foam">
-
+        android:textColorHint="@color/blue"
+        app:boxStrokeColor="@color/sea_foam"
+        android:backgroundTint="@color/own_black"
+        app:boxStrokeWidth="2dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email"
             android:layout_gravity="center_horizontal"
@@ -42,6 +43,10 @@
             android:layout_height="match_parent"
             android:padding="30dp"
             android:gravity="center"
+            app:boxStrokeColor="@color/sea_foam"
+            android:backgroundTint="@color/own_black"
+            app:boxStrokeWidth="2dp"
+            android:textColor="@color/blue"
             android:inputType="textEmailAddress"
             android:hint="Email"/>
 
@@ -50,11 +55,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:textColorHint="@color/own_black"
-        android:layout_marginTop="30dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/sea_foam">
-
+        android:textColorHint="@color/blue"
+        app:boxStrokeColor="@color/sea_foam"
+        android:backgroundTint="@color/own_black"
+        app:boxStrokeWidth="2dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
             android:layout_gravity="center_horizontal"
@@ -62,6 +66,10 @@
             android:layout_height="match_parent"
             android:padding="30dp"
             android:gravity="center"
+            app:boxStrokeColor="@color/sea_foam"
+            android:backgroundTint="@color/own_black"
+            app:boxStrokeWidth="2dp"
+            android:textColor="@color/blue"
             android:inputType="textPassword"
             android:hint="Password"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -73,6 +81,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_regular"
         android:textStyle="bold"
+        android:textColor="@color/own_black"
         android:backgroundTint="@color/pink"
         android:text="Sign In"
         android:layout_marginTop="50dp"/>
@@ -84,6 +93,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_regular"
         android:textStyle="bold"
+        android:textColor="@color/own_black"
         android:backgroundTint="@color/blue"
         android:text="Continue with Google"
         android:layout_marginTop="30dp"/>
@@ -95,6 +105,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_regular"
         android:textStyle="bold"
+        android:textColor="@color/own_black"
         android:backgroundTint="@color/blue"
         android:text="Continue with Facebook"
         android:layout_marginTop="10dp"/>

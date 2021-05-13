@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/own_black"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.poggerz.fragments.RegisterFragment">
 
@@ -16,22 +16,27 @@
         android:text="Welcome to Poggerz, Let's Get Started!"
         android:padding="10dp"
         android:textAlignment="center"
-        android:textColor="@color/own_black"
-        android:textSize="24sp" />
+        android:textColor="@color/own_white"
+        android:textSize="24sp"
+        android:gravity="center_horizontal" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_width="250dp"
-        android:textColorHint="@color/own_black"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/sea_foam">
+        android:textColorHint="@color/blue"
+        app:boxStrokeColor="@color/sea_foam"
+        android:backgroundTint="@color/own_black"
+        app:boxStrokeWidth="2dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="@color/own_black"
+            app:boxStrokeColor="@color/sea_foam"
+            android:backgroundTint="@color/own_black"
+            app:boxStrokeWidth="2dp"
+            android:textColor="@color/blue"
             android:hint="Name"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -39,16 +44,19 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_width="250dp"
-        android:textColorHint="@color/own_black"
-        android:layout_marginTop="10dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/sea_foam">
+        android:textColorHint="@color/blue"
+        app:boxStrokeColor="@color/sea_foam"
+        android:backgroundTint="@color/own_black"
+        app:boxStrokeWidth="2dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="@color/own_black"
+            app:boxStrokeColor="@color/sea_foam"
+            android:backgroundTint="@color/own_black"
+            app:boxStrokeWidth="2dp"
+            android:textColor="@color/blue"
             android:hint="Email"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,36 +64,39 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_width="250dp"
-        android:textColorHint="@color/own_black"
-        android:layout_marginTop="10dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/sea_foam">
+        android:textColorHint="@color/blue"
+        app:boxStrokeColor="@color/sea_foam"
+        android:backgroundTint="@color/own_black"
+        app:boxStrokeWidth="2dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColorHint="@color/own_black"
-            android:inputType="textPassword"
-            android:textColor="@color/own_black"
+            app:boxStrokeColor="@color/sea_foam"
+            android:backgroundTint="@color/own_black"
+            app:boxStrokeWidth="2dp"
+            android:textColor="@color/blue"
             android:hint="Password"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:textColorHint="@color/own_black"
-        android:layout_marginTop="10dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/sea_foam">
+        android:textColorHint="@color/blue"
+        app:boxStrokeColor="@color/sea_foam"
+        android:backgroundTint="@color/own_black"
+        app:boxStrokeWidth="2dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_confirm_password"
             android:layout_gravity="center_horizontal"
             android:layout_width="250dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:inputType="textPassword"
-            android:textColor="@color/own_black"
+            app:boxStrokeColor="@color/sea_foam"
+            android:backgroundTint="@color/own_black"
+            app:boxStrokeWidth="2dp"
+            android:textColor="@color/blue"
             android:hint="Confirm Password"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -93,18 +104,20 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_width="250dp"
-        android:textColorHint="@color/own_black"
-        android:layout_marginTop="10dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        app:boxStrokeColor="@color/sea_foam">
-
+        android:textColorHint="@color/blue"
+        app:boxStrokeColor="@color/sea_foam"
+        android:backgroundTint="@color/own_black"
+        app:boxStrokeWidth="2dp">
         <androidx.appcompat.widget.AppCompatAutoCompleteTextView
             android:id="@+id/age"
             android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="@color/own_black"
+            app:boxStrokeColor="@color/sea_foam"
+            android:backgroundTint="@color/own_black"
+            app:boxStrokeWidth="2dp"
+            android:textColor="@color/blue"
                 android:hint="Age"/>
     </com.google.android.material.textfield.TextInputLayout>
 

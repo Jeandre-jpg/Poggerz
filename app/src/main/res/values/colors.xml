@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="salmon">#F27983</color>
+    <color name="blue2">#35F2DF</color>
     <color name="pink">#D95FAE</color>
     <color name="sea_foam">#99F2C8</color>
     <color name="blue">#38D0F2</color>

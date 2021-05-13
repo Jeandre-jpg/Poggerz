@@ -2,7 +2,8 @@ package com.example.poggerz
 
 import android.content.Intent
 import android.os.Bundle
-import com.example.poggerz.R
+import android.view.animation.AnimationUtils
+import android.widget.*
 import com.example.poggerz.fragments.LoginFragment
 import com.example.poggerz.fragments.RegisterFragment
 import com.example.poggerz.models.User
@@ -12,14 +13,23 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import kotlinx.android.synthetic.main.activity_authentication.*
 
 class AuthenticationActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authentication)
 
+        val ttb = AnimationUtils.loadAnimation(this, R.anim.ttb)
 
+        val ll_tab = findViewById(R.id.ll_tab) as LinearLayout
+        val tv_login = findViewById(R.id.tv_login) as TextView
+        val tv_register = findViewById(R.id.tv_register) as TextView
+        val fl_fragment = findViewById(R.id.fl_fragment) as FrameLayout
+
+        ll_tab.startAnimation(ttb)
+        tv_login.startAnimation(ttb)
+        tv_register.startAnimation(ttb)
+        fl_fragment.startAnimation(ttb)
 
 
         //reference to our fragments
