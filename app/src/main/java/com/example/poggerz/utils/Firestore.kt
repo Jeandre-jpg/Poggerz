@@ -8,6 +8,12 @@ import com.example.poggerz.MainActivity
 import com.example.poggerz.models.User
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
+import java.lang.Exception
 
 class Firestore {
 
@@ -50,6 +56,19 @@ class Firestore {
                 }
     }
 
+//    fun saveNote(activity: MainActivity, note: Note) = CoroutineScope(Dispatchers.IO).launch{
+//        try {
+//            //add db
+//            notesdb.add(note).await()
+//        }catch (e: Exception){
+//            //handle error
+//            withContext(Dispatchers.Main){
+//                Toast.makeText(activity, e.message, Toast.LENGTH_LONG).show()
+//            }
+//        }
 
-}
+    }
+
+
+//}
 

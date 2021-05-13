@@ -1,17 +1,17 @@
 package com.example.poggerz
 
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.example.poggerz.R
-import kotlinx.android.synthetic.main.item_note.view.*
-
+//import android.view.LayoutInflater
+//import android.view.View
+//import android.view.ViewGroup
+//import androidx.recyclerview.widget.RecyclerView
+//import com.example.poggerz.R
+//import com.example.poggerz.models.Note
+//import kotlinx.android.synthetic.main.item_note.view.*
 //
 //class NoteAdapter(
 //    var notes: List<Note>
 //) : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
-
+//
 //    inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 //
 //

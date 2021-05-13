@@ -16,20 +16,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0f9831f-9edd-4fea-9044-3eadfad4001a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_play_services_1_1_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Poggerz.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Poggerz.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/Note.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/models/Note.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/NoteAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/NoteAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/models/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/models/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/utils/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/utils/Constants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/utils/Firestore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/utils/Firestore.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_groups.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_groups.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_individuals.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_individuals.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,11 +132,11 @@
       <recent name="com.example.poggerz.utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/models" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
       <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/example/poggerz" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/font" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -263,22 +274,22 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="577" y="223" key="AndroidCreateResourceFileDialog/0.25.1440.875@0.25.1440.875" timestamp="1620863245142" />
-    <state width="1193" height="204" key="GridCell.Tab.0.bottom" timestamp="1620906887068">
+    <state width="1193" height="204" key="GridCell.Tab.0.bottom" timestamp="1620912378988">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1193" height="204" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1620906887068" />
-    <state width="1193" height="204" key="GridCell.Tab.0.center" timestamp="1620906887067">
+    <state width="1193" height="204" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1620912378988" />
+    <state width="1193" height="204" key="GridCell.Tab.0.center" timestamp="1620912378988">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1193" height="204" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1620906887067" />
-    <state width="1193" height="204" key="GridCell.Tab.0.left" timestamp="1620906887064">
+    <state width="1193" height="204" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1620912378988" />
+    <state width="1193" height="204" key="GridCell.Tab.0.left" timestamp="1620912378987">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1193" height="204" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1620906887064" />
-    <state width="1193" height="204" key="GridCell.Tab.0.right" timestamp="1620906887067">
+    <state width="1193" height="204" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1620912378987" />
+    <state width="1193" height="204" key="GridCell.Tab.0.right" timestamp="1620912378988">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1193" height="204" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1620906887067" />
+    <state width="1193" height="204" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1620912378988" />
     <state x="266" y="109" key="SettingsEditor" timestamp="1620229981590">
       <screen x="0" y="25" width="1440" height="875" />
     </state>

@@ -21,14 +21,33 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         setSupportActionBar(toolbar)
 
 
-        val userId= intent.getStringExtra(Constants.LOGGED_IN_ID)
 
-        if(userId != null){
-            Firestore().getUserInfoById(this, userId)
 
-        }else {
-            startActivity(Intent(this, AuthenticationActivity::class.java))
-        }
+//
+//
+//        //create list of notes
+//        var notesList = mutableListOf(
+//                Note("Note 1", false),
+//                Note("Note 2", true)
+//        )
+//
+//        //adapter
+//        val adapter = NoteAdapter(notesList)
+//        rv_notes.adapter = adapter
+//        rv_notes.layoutManager = LinearLayoutManager(this)
+//
+//        btn_add.setOnClickListener {
+//            val title = et_new_note.text.toString()
+//            val note = Note(title, false)
+//
+//            notesList.add(note)
+//
+//            //notify adapter
+//            adapter.notifyItemInserted(notesList.size - 1)
+//
+//            et_new_note.text.clear()
+//        }
+//
 
 
 
@@ -90,8 +109,6 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
 
         return true
     }
-
-
 
     fun setToolbarTitle(title:String){
         supportActionBar?.title = title
