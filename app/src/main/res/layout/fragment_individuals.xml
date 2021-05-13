@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="@color/own_black"
     tools:context="com.example.poggerz.fragments.IndividualsFragment">
+
+
 
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:padding="30dp"
         android:backgroundTint="@color/own_black"
@@ -18,7 +19,6 @@
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="350dp"
         android:padding="30dp"
         android:backgroundTint="@color/own_black"
@@ -36,40 +36,20 @@
 
     </LinearLayout>
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="120dp"
-        android:background="@color/own_black"
-        android:gravity="center"
-        android:padding="30dp">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-250dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/gorillaz_1"
-            android:gravity="center"
-            android:text="Chat with friends!"
-            android:textColor="@color/army_green"
-            android:textSize="50sp"
-            android:textStyle="bold" />
-
-
-
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_gravity="center_horizontal">-->
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="200dp"
         android:src="@drawable/icon_2d_third" />
     <TextView
         android:id="@+id/textView3"
@@ -80,7 +60,7 @@
         android:layout_weight="1"
         android:fontFamily="@font/montserrat_regular"
         android:gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="-80dp"
         android:textStyle="bold"
         android:text="Johhny"
         android:textColor="@color/yellow"
@@ -90,7 +70,7 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="200dp"
         android:src="@drawable/icon_murdoc_first" />
     <TextView
         android:id="@+id/textView4"
@@ -101,7 +81,7 @@
         android:layout_weight="1"
         android:fontFamily="@font/montserrat_regular"
         android:gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="-80dp"
         android:textStyle="bold"
         android:text="Jane"
         android:textColor="@color/yellow"
@@ -111,7 +91,7 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="200dp"
         android:src="@drawable/icon_noodle_first" />
     <TextView
         android:id="@+id/textView5"
@@ -122,7 +102,7 @@
         android:layout_weight="1"
         android:fontFamily="@font/montserrat_regular"
         android:gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="-80dp"
         android:textStyle="bold"
         android:text="Emily"
         android:textColor="@color/yellow"
@@ -132,7 +112,7 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginLeft="320dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="200dp"
         android:src="@drawable/icon_russel_first" />
     <TextView
         android:id="@+id/textView6"
@@ -143,11 +123,13 @@
         android:layout_weight="1"
         android:fontFamily="@font/montserrat_regular"
         android:gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="-80dp"
         android:textStyle="bold"
         android:text="Kameron"
         android:textColor="@color/yellow"
         android:textSize="15dp" />
+
+<!--    </LinearLayout>-->
 
     <LinearLayout
         android:id="@+id/ll_tab"
@@ -156,7 +138,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="310dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -193,15 +175,16 @@
     <FrameLayout
         android:id="@+id/fl_fragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:background="@color/blue"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="380dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_tab" />
+
 
 </FrameLayout>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue2"
+    android:background="@color/own_black"
     tools:context="com.example.poggerz.fragments.GroupsFragment" >
 
     <Button
@@ -36,34 +36,6 @@
     </LinearLayout>
 
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="120dp"
-        android:background="@color/own_black"
-        android:gravity="center"
-        android:padding="30dp">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-250dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/gorillaz_1"
-            android:gravity="center"
-            android:text="Chat with Groups!"
-            android:textColor="@color/army_green"
-            android:textSize="50sp"
-            android:textStyle="bold" />
-
-
-
-    </LinearLayout>
-
-
     <LinearLayout
         android:id="@+id/ll_tab"
         android:background="@color/chocolate_brown"
@@ -71,7 +43,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="230dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -108,10 +80,10 @@
     <FrameLayout
         android:id="@+id/fl_fragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:background="@color/blue"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"

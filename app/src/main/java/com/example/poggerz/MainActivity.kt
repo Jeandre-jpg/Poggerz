@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         }else {
             startActivity(Intent(this, AuthenticationActivity::class.java))
         }
-        
+
 
 
         var toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close)

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/pink"
+    android:background="@color/own_black"
     android:id="@+id/drawerLayout"
     tools:context=".MainActivity">
 
