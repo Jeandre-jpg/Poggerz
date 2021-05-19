@@ -8,18 +8,13 @@
     android:padding="20dp"
     tools:context="com.example.poggerz.SplashActivity">
 
-
-    <ImageView
-        android:id="@+id/load"
-        android:layout_width="291dp"
-        android:layout_height="487dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@drawable/giphy"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.245"
-        app:srcCompat="@raw/giphy" />
-
+        app:layout_constraintTop_toTopOf="parent" />
     <LinearLayout
 
         android:id="@+id/buttonContainer"
@@ -47,21 +42,14 @@
             android:textColor="@color/own_black"
             android:textStyle="bold"
             android:layout_weight="1"
-            android:text="Loading..." />
+            android:text="Loading" />
 
-
-        <Button
-            android:id="@+id/start_btn"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:background="#FFFFFF"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="Start"
-            android:textColor="@color/own_white"
-            android:textStyle="bold"
-            app:backgroundTint="@color/army_green"
-            app:layout_constraintEnd_toEndOf="parent"
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView2"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:src="@drawable/loader"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="524dp" />
+            app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,7 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.activity_loading.*
+import java.lang.System.load
 
 
 class LoadingActivity : AppCompatActivity() {
@@ -17,15 +16,31 @@ class LoadingActivity : AppCompatActivity() {
 
         val ttb = AnimationUtils.loadAnimation(this, R.anim.ttb)
 
-        val load = findViewById(R.id.load) as ImageView
+        val loadMain = findViewById(R.id.gifImageView) as ImageView
+        val loadSecond = findViewById(R.id.gifImageView2) as ImageView
         val buttonContainer = findViewById(R.id.buttonContainer) as LinearLayout
 
-        load.startAnimation(ttb)
+        loadMain.startAnimation(ttb)
+        loadSecond.startAnimation(ttb)
         buttonContainer.startAnimation(ttb)
 
 
-        start_btn.setOnClickListener {
-            startActivity(Intent(this, AuthenticationActivity::class.java))
+
+
+        val timer: Thread = object : Thread() {
+            override fun run() {
+                try {
+                    sleep(4000)
+                } catch (e: InterruptedException) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace()
+                } finally {
+                    val i = Intent(this@LoadingActivity, AuthenticationActivity::class.java)
+                    finish()
+                    startActivity(i)
+                }
+            }
         }
+        timer.start()
     }
 }

@@ -114,9 +114,8 @@
         app:boxStrokeColor="@color/sea_foam"
         android:backgroundTint="@color/own_black"
         app:boxStrokeWidth="2dp">
-        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-            android:id="@+id/age"
-            android:layout_gravity="center_horizontal"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_age"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"

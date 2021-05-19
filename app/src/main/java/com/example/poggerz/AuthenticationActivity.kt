@@ -6,7 +6,7 @@ import android.view.animation.AnimationUtils
 import android.widget.*
 import com.example.poggerz.fragments.LoginFragment
 import com.example.poggerz.fragments.RegisterFragment
-import com.example.poggerz.models.User
+import com.example.poggerz.model.User
 import com.example.poggerz.utils.Constants
 import com.example.poggerz.utils.Firestore
 import com.google.android.gms.tasks.OnCompleteListener
@@ -61,16 +61,21 @@ class AuthenticationActivity : BaseActivity() {
         }
     }
 
-    fun registerUser(email: String, password: String, name: String) {
+    fun registerUser(
+        email: String,
+        password: String,
+        name: String,
+        age: String
+    ) {
 
-        if(email == "" || password == ""){
+        if (email == "" || password == "") {
             showErrorSnackBar("Please provide the required information", true)
         } else {
 
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(
                             OnCompleteListener<AuthResult> { task ->
-                                if(task.isSuccessful){
+                                if (task.isSuccessful) {
                                     val firebaseUser: FirebaseUser = task.result!!.user!!
                                     //testing
                                     //   showErrorSnackBar("Successfully Registered user uid ${firebaseUser.uid}", false)
@@ -84,7 +89,7 @@ class AuthenticationActivity : BaseActivity() {
                                     )
 
                                     //Call Firestore
-                                    Firestore().registerUser(this,user)
+                                    Firestore().registerUser(this, user)
 
                                 } else {
                                     showErrorSnackBar(task.exception!!.message.toString(), true)
@@ -94,16 +99,16 @@ class AuthenticationActivity : BaseActivity() {
         }
     }
 
-    fun loginUser(email: String, password: String){
+    fun loginUser(email: String, password: String) {
 
-        if(email == "" || password == ""){
+        if (email == "" || password == "") {
             showErrorSnackBar("Please enter your email & password", true)
         } else {
 
             FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(
-                            OnCompleteListener<AuthResult> {task ->
-                                if(task.isSuccessful){
+                            OnCompleteListener<AuthResult> { task ->
+                                if (task.isSuccessful) {
                                     val firebaseUser: FirebaseUser = task.result!!.user!!
 
                                     //  showErrorSnackBar("Successfully Logged In user uid ${firebaseUser.uid}", false)
@@ -120,7 +125,8 @@ class AuthenticationActivity : BaseActivity() {
         }
 
     }
-    fun registerUserSuccess(uid: String){
+
+    fun registerUserSuccess(uid: String) {
         showErrorSnackBar("Success on Registration", false)
 
         //TODO: Shared Prefrences
@@ -132,7 +138,7 @@ class AuthenticationActivity : BaseActivity() {
         finish()
     }
 
-    fun loginUserSuccess(uid: String){
+    fun loginUserSuccess(uid: String) {
 
         //TODO: Shared Prefrences
 

@@ -9,20 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Poggerz.NoActionBar">
-        <activity android:name="com.example.poggerz.BaseActivity"></activity>
-      <activity android:name="com.example.poggerz.SplashActivity" android:theme="@style/Theme.Poggerz.NoActionBar">
+        <activity android:name=".BaseActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.Poggerz.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-     <activity android:name="com.example.poggerz.LoadingActivity">
-        </activity>
-        <activity android:name="com.example.poggerz.AuthenticationActivity">
-        </activity>
-        <activity android:name="com.example.poggerz.MainActivity">
-        </activity>
+        <activity android:name=".LoadingActivity"></activity>
+        <activity android:name=".AuthenticationActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ChatActivity"></activity>
     </application>
 
 </manifest>

@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="@color/sea_foam">
+    android:background="@color/own_black">
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:text="Menu"
-        android:textColor="@color/own_black"
-        android:textSize="24sp"
+        android:fontFamily="@font/gorillaz_1"
+        android:textColor="@color/own_white"
+        android:textSize="70sp"
         android:textStyle="bold"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"

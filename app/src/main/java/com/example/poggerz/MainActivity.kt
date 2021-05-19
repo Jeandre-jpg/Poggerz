@@ -1,6 +1,5 @@
 package com.example.poggerz
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -8,8 +7,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.example.poggerz.fragments.*
-import com.example.poggerz.utils.Constants
-import com.example.poggerz.utils.Firestore
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -19,35 +16,6 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
-
-
-
-//
-//
-//        //create list of notes
-//        var notesList = mutableListOf(
-//                Note("Note 1", false),
-//                Note("Note 2", true)
-//        )
-//
-//        //adapter
-//        val adapter = NoteAdapter(notesList)
-//        rv_notes.adapter = adapter
-//        rv_notes.layoutManager = LinearLayoutManager(this)
-//
-//        btn_add.setOnClickListener {
-//            val title = et_new_note.text.toString()
-//            val note = Note(title, false)
-//
-//            notesList.add(note)
-//
-//            //notify adapter
-//            adapter.notifyItemInserted(notesList.size - 1)
-//
-//            et_new_note.text.clear()
-//        }
-//
 
 
 
@@ -65,7 +33,7 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
     }
 
 
-    fun setUserInfo(user: com.example.poggerz.models.User){
+    fun setUserInfo(user: com.example.poggerz.model.User){
         title = user.name
     }
 

@@ -25,8 +25,9 @@ class RegisterFragment : Fragment() {
             var email: String = et_email.text.toString().trim{ it <= ' ' }
             var password: String = et_password.text.toString().trim{ it <= ' ' }
             var name: String = et_name.text.toString()
+            var age: String = et_age.text.toString()
 
-            (activity as AuthenticationActivity?)!!.registerUser(email, password, name)
+            (activity as AuthenticationActivity?)!!.registerUser(email, password, name, age)
         }
 
         return view

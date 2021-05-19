@@ -16,9 +16,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0f9831f-9edd-4fea-9044-3eadfad4001a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_play_services_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_19_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_17_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__pl_droidsonroids_gif_android_gif_drawable_1_2_19_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__pl_droidsonroids_relinker_1_3_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/ChatActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_chat.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -30,17 +35,35 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_1_0_aar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/Poggerz.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Poggerz.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/AuthenticationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/AuthenticationActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/LoadingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/LoadingActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/Note.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/models/Note.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/NoteAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/NoteAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/models/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/models/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/fragments/LoginFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/fragments/LoginFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/fragments/RegisterFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/fragments/RegisterFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/models/Note.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/model/Note.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/models/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/model/User.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/utils/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/utils/Constants.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/utils/Firestore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/utils/Firestore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/ttb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/anim/ttb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_loading.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_loading.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_individuals.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_individuals.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/navigation_header.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/navigation_header.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/giphy.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/giphy.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,8 +120,8 @@
         <option value="Kotlin File" />
         <option value="resourceFile" />
         <option value="Kotlin Object" />
-        <option value="Kotlin Class" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -128,14 +151,19 @@
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.1253435282">
+      <recent name="com.example.poggerz" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.poggerz" />
+      <recent name="com.example.poggerz.fragments" />
       <recent name="com.example.poggerz.utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/models" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
       <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/example/poggerz" />
     </key>
   </component>
@@ -254,14 +282,14 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="433" y="42" key="#app/0.25.1440.875@0.25.1440.875" timestamp="1620859028478" />
-    <state x="544" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1620859055909">
+    <state x="544" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1621445549324">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="544" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.875@0.25.1440.875" timestamp="1620859055909" />
-    <state x="450" y="258" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1620859442541">
+    <state x="544" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.875@0.25.1440.875" timestamp="1621445549324" />
+    <state x="450" y="258" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1621445468876">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="450" y="258" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.25.1440.875@0.25.1440.875" timestamp="1620859442541" />
+    <state x="450" y="258" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.25.1440.875@0.25.1440.875" timestamp="1621445468876" />
     <state x="344" y="153" width="925" height="560" key="AVDManager" timestamp="1620230327826">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -270,30 +298,30 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="394" y="192" key="AndroidCreateResourceDirectoryDialog/0.25.1440.875@0.25.1440.875" timestamp="1620896639351" />
-    <state x="577" y="223" key="AndroidCreateResourceFileDialog" timestamp="1620863245142">
+    <state x="577" y="223" key="AndroidCreateResourceFileDialog" timestamp="1621420534915">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="577" y="223" key="AndroidCreateResourceFileDialog/0.25.1440.875@0.25.1440.875" timestamp="1620863245142" />
-    <state width="1193" height="204" key="GridCell.Tab.0.bottom" timestamp="1620912378988">
+    <state x="577" y="223" key="AndroidCreateResourceFileDialog/0.25.1440.875@0.25.1440.875" timestamp="1621420534915" />
+    <state width="1193" height="204" key="GridCell.Tab.0.bottom" timestamp="1621446536906">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1193" height="204" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1620912378988" />
-    <state width="1193" height="204" key="GridCell.Tab.0.center" timestamp="1620912378988">
+    <state width="1193" height="204" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1621446536906" />
+    <state width="1193" height="204" key="GridCell.Tab.0.center" timestamp="1621446536905">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1193" height="204" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1620912378988" />
-    <state width="1193" height="204" key="GridCell.Tab.0.left" timestamp="1620912378987">
+    <state width="1193" height="204" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1621446536905" />
+    <state width="1193" height="204" key="GridCell.Tab.0.left" timestamp="1621446536905">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1193" height="204" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1620912378987" />
-    <state width="1193" height="204" key="GridCell.Tab.0.right" timestamp="1620912378988">
+    <state width="1193" height="204" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1621446536905" />
+    <state width="1193" height="204" key="GridCell.Tab.0.right" timestamp="1621446536905">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1193" height="204" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1620912378988" />
-    <state x="266" y="109" key="SettingsEditor" timestamp="1620229981590">
+    <state width="1193" height="204" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1621446536905" />
+    <state x="266" y="109" key="SettingsEditor" timestamp="1621433991198">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="266" y="109" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1620229981590" />
+    <state x="266" y="109" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1621433991198" />
     <state x="418" y="223" key="chooseDestDirectoryDialog" timestamp="1620304330212">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
