@@ -80,6 +80,9 @@ dependencies {
 
     //firestore
     implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
 
     //coroutine
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
