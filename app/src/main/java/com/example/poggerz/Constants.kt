@@ -1,6 +1,9 @@
-package com.example.poggerz.utils
+package com.example.poggerz
 
 object Constants {
+
+    const val USER_NAME = "USER_NAME"
+    const val USER_ID = "USER_ID"
 
     const val USERS: String = "users"
     const val NOTES: String = "notes"

@@ -1,119 +1,66 @@
 package com.example.poggerz
 
+import android.accounts.Account
+import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Bitmap
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.poggerz.AuthenticationActivity
-import com.example.poggerz.NoteAdapter
-import com.example.poggerz.R
-import com.example.poggerz.model.Note
-import com.example.poggerz.utils.Constants
-import com.example.poggerz.utils.Firestore
-import com.google.firebase.firestore.DocumentChange
-import com.google.firebase.firestore.FirebaseFirestoreException
-import com.google.firebase.firestore.QuerySnapshot
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.ktx.toObject
-import com.google.firebase.ktx.Firebase
+import android.provider.MediaStore
+import android.view.View
+import android.widget.ImageView
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.example.poggerz.fragments.ChatsFragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.android.material.navigation.NavigationView
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.Section
+import com.xwray.groupie.kotlinandroidextensions.Item
+import com.xwray.groupie.kotlinandroidextensions.ViewHolder
 import kotlinx.android.synthetic.main.activity_chat.*
+import kotlinx.android.synthetic.main.activity_chats.*
+import java.io.ByteArrayOutputStream
+import java.util.*
 
 class ChatActivity : AppCompatActivity() {
 
-    private val poggerzdb = Firebase.firestore.collection(Constants.NOTES)
+    private lateinit var drawer: DrawerLayout
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_chats)
 
+        //Reference the Chats and Search Fragments
+        val chatsFragment = ChatsFragment()
 
-        val userId = intent.getStringExtra(Constants.LOGGED_IN_ID)
-
-        if (userId != null) {
-            Firestore().getUserInfoById(this, userId)
-
-        } else {
-            startActivity(Intent(this, AuthenticationActivity::class.java))
+        //Set the default fragment view to ChatsFragment
+        supportFragmentManager.beginTransaction().apply {
+            fl_fragment_chats.setBackgroundResource(R.drawable.gorillaz_camo_pattern_full)
+            replaceFragment(ChatsFragment())
+            commit()
         }
 
+        //Make the View FullScreen
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
+        var profileIcon = findViewById<ImageView>(R.id.profile_image)
 
-
-
-        subscribeToNotesUpdates()
-
-        btn_add.setOnClickListener {
-            //getting input from user
-            val title = et_new_note.text.toString()
-            val note = Note(title, false)
-
-            Firestore().saveNote(this, note)
-
-            et_new_note.text.clear()
+        profileIcon.setOnClickListener {
+            val intent = Intent(this, Account::class.java)
+            startActivity(intent)
         }
-    }
 
-
-
-
-
-    fun setUserInfo(user: com.example.poggerz.model.User){
-        title = user.name
-    }
-
-
-
-
-
-
-
-    fun setToolbarTitle(title:String){
-        supportActionBar?.title = title
-    }
-
-    fun changeFragment(frag: Fragment){
-        val fragment = supportFragmentManager.beginTransaction()
-        fragment.replace(R.id.fl_fragment, frag).commit()
-    }
-
-    fun subscribeToNotesUpdates() {
-        poggerzdb.addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
-            error?.let {
-                Toast.makeText(this, error?.message, Toast.LENGTH_SHORT).show()
-                return@addSnapshotListener
-
-            }
-
-            var notesList = mutableListOf<Note>()
-
-            querySnapshot?.let {
-
-                for (document in it) {
-                    val note = document.toObject<Note>()
-
-                    notesList.add(note)
-
-                }
-
-                //adapter - add new list to recyclerview
-                val adapter = NoteAdapter(notesList)
-                rv_notes.adapter = adapter
-                rv_notes.layoutManager = LinearLayoutManager(this)
-
-                for (dc in querySnapshot?.documentChanges) {
-                    when (dc.type) {
-                        DocumentChange.Type.ADDED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
-                        DocumentChange.Type.MODIFIED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
-                        DocumentChange.Type.REMOVED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
-                    }
-
-                }
+        tv_chats.setOnClickListener {
+            tv_chats.setBackgroundResource(R.drawable.gorillaz_camo_pattern_full)
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_fragment, chatsFragment)
+                addToBackStack(null)
+                commit()
             }
         }
-
-
     }
 }

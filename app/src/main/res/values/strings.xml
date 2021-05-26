@@ -7,4 +7,7 @@
     <string name="join_chat">Join Chat</string>
     <string name="send">Send</string>
     <string name="enter_message">Enter message…</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
 </resources>
