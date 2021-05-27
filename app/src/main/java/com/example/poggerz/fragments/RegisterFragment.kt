@@ -1,14 +1,21 @@
 package com.example.poggerz.fragments
 
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.poggerz.R
 import com.example.poggerz.AuthenticationActivity
+import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.android.synthetic.main.fragment_register.*
+import kotlinx.android.synthetic.main.fragment_register.et_email
+import kotlinx.android.synthetic.main.fragment_register.et_password
 import kotlinx.android.synthetic.main.fragment_register.view.*
 
 
@@ -29,6 +36,14 @@ class RegisterFragment : Fragment() {
 
             (activity as AuthenticationActivity?)!!.registerUser(email, password, name, age)
         }
+
+//        account_register.setOnClickListener {
+//            Log.d("MainActivity", "Try to show login activity")
+//
+//            // launch the login activity somehow
+//            val intent = Intent(this, LoginFragment::class.java)
+//            startActivity(intent)
+//        }
 
         return view
     }

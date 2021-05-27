@@ -16,8 +16,8 @@ class SplashActivity : AppCompatActivity() {
 
         val ttb = AnimationUtils.loadAnimation(this, R.anim.ttb)
 
-        val logo_app = findViewById(R.id.logo_app) as ImageView
-        val buttonContainer = findViewById(R.id.buttonContainer) as LinearLayout
+        val logo_app = findViewById<ImageView>(R.id.logo_app)
+        val buttonContainer = findViewById<LinearLayout>(R.id.buttonContainer)
 
         logo_app.startAnimation(ttb)
         buttonContainer.startAnimation(ttb)
