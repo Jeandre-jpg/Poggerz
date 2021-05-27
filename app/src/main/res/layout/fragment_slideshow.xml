@@ -3,19 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="@color/own_black">
+    android:layout_height="match_parent"
+    tools:context=".ui.slideshow.SlideshowFragment">
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="160dp"
+        android:id="@+id/text_slideshow"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Menu"
-        android:fontFamily="@font/gorillaz_1"
-        android:textColor="@color/own_white"
-        android:textSize="70sp"
-        android:textStyle="bold"
-        android:typeface="normal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
