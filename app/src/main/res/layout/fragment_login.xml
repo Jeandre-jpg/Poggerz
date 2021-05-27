@@ -9,17 +9,7 @@
     tools:context="com.example.poggerz.fragments.LoginFragment">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_regular"
-        android:text="Welcome back to Poggerz!"
-        android:padding="10dp"
-        android:textAlignment="center"
-        android:textColor="@color/own_black"
-        android:textSize="24sp"
-        android:gravity="center_horizontal" />
+
 
 <!--    <TextView-->
 <!--        android:id="@+id/textView2"-->
@@ -82,19 +72,32 @@
         android:fontFamily="@font/montserrat_regular"
         android:textStyle="bold"
         android:textColor="@color/own_black"
-        android:backgroundTint="@color/pink"
+        android:background="@drawable/rounded_corners_pink"
         android:text="Sign In"
         android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/account_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Don't Have an Account?"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/own_white"
+        android:textSize="15sp"
+        android:gravity="center_horizontal" />
 
     <Button
         android:id="@+id/btn_google"
         android:layout_width="270dp"
         android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:fontFamily="@font/montserrat_regular"
         android:textStyle="bold"
         android:textColor="@color/own_black"
-        android:backgroundTint="@color/blue"
+        android:background="@drawable/rounded_corners_blue"
         android:text="Continue with Google"
         android:layout_marginTop="30dp"/>
 
@@ -102,11 +105,11 @@
         android:id="@+id/btn_facebook"
         android:layout_width="270dp"
         android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:fontFamily="@font/montserrat_regular"
         android:textStyle="bold"
         android:textColor="@color/own_black"
-        android:backgroundTint="@color/blue"
+        android:background="@drawable/rounded_corners_blue"
         android:text="Continue with Facebook"
         android:layout_marginTop="10dp"/>
 

@@ -5,8 +5,7 @@ import android.os.Bundle
 import com.example.poggerz.fragments.LoginFragment
 import com.example.poggerz.fragments.RegisterFragment
 import com.example.poggerz.model.User
-import com.example.poggerz.utils.Constants
-import com.example.poggerz.utils.Firestore
+import com.example.poggerz.util.Firestore
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -46,7 +45,11 @@ class AuthenticationActivity : BaseActivity() {
                 commit()
             }
         }
+
+
+
     }
+
 
     fun registerUser(
         email: String,
