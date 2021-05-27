@@ -16,9 +16,9 @@ class LoadingActivity : AppCompatActivity() {
 
         val ttb = AnimationUtils.loadAnimation(this, R.anim.ttb)
 
-        val loadMain = findViewById(R.id.gifImageView) as ImageView
-        val loadSecond = findViewById(R.id.gifImageView2) as ImageView
-        val buttonContainer = findViewById(R.id.buttonContainer) as LinearLayout
+        val loadMain = findViewById<ImageView>(R.id.gifImageView)
+        val loadSecond = findViewById<ImageView>(R.id.gifImageView2)
+        val buttonContainer = findViewById<LinearLayout>(R.id.buttonContainer)
 
         loadMain.startAnimation(ttb)
         loadSecond.startAnimation(ttb)

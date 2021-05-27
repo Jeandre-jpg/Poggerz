@@ -9,10 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Poggerz.NoActionBar">
-        <activity
-            android:name=".MainActivity2"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/Theme.Poggerz.NoActionBar.NoActionBar"></activity>
         <activity android:name=".BaseActivity" />
         <activity
             android:name=".SplashActivity"
@@ -25,7 +21,9 @@
         </activity>
         <activity android:name=".LoadingActivity" />
         <activity android:name=".AuthenticationActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".SettingsActivity" />
         <activity android:name=".ChatActivity" />
     </application>
 
