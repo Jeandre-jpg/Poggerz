@@ -21,14 +21,13 @@
             app:titleTextColor="@color/own_black"
             android:elevation="4dp"
             app:navigationIcon="@drawable/ic_back"
-            app:menu="@menu/chat_app_bar"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMessages"
+        android:id="@+id/rv_notes"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/chat_topbar"
@@ -55,7 +54,7 @@
             app:boxCornerRadiusBottomEnd="25dp"
             app:boxCornerRadiusBottomStart="25dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/message_content"
+                android:id="@+id/et_new_note"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -69,7 +68,7 @@
             android:layout_marginLeft="10dp"
             android:layout_alignParentRight="true">
             <ImageButton
-                android:id="@+id/send_btn"
+                android:id="@+id/btn_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_send"

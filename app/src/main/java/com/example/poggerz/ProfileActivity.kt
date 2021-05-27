@@ -1,12 +1,11 @@
 package com.example.poggerz
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.poggerz.utils.Constants
 import com.example.poggerz.utils.Firestore
-import kotlinx.android.synthetic.main.activity_profile.*
+
 
 class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,14 +20,14 @@ class ProfileActivity : AppCompatActivity() {
         val userId = sharedPref.getString(Constants.LOGGED_IN_ID, "")
 
         //Use userID to update App with user object
-        Firestore().getUserInfoById(this, userId!!)
+//        Firestore().getUserInfoById(this, userId!!)
 
         //Back button to Conversations Activity
-        profile_appbar.setNavigationOnClickListener {
-            val intent = Intent(this, MessagesActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
+//        profile_appbar.setNavigationOnClickListener {
+//            val intent = Intent(this, MessagesActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
 
 
     }

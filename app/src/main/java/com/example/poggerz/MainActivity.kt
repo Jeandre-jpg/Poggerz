@@ -15,100 +15,75 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var drawer: DrawerLayout
-
-    private lateinit var auth: FirebaseAuth
-
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbar)
 
-        //Get drawer by ID
-        drawer = findViewById(R.id.drawer_layout)
-        var navigationView: NavigationView = findViewById(R.id.nav_view)
-        navigationView.setNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-
-        //Menu Icon
-        var menu_icon = findViewById<ImageView>(R.id.burger_menu)
-
-        //Toggle for navigation drawer open and close
-        var toggle: ActionBarDrawerToggle = ActionBarDrawerToggle(
-            this,
-            drawer,
-            R.string.navigation_drawer_open,
-            R.string.navigation_drawer_close
-        )
-        drawer.addDrawerListener(toggle)
+        var toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close)
+        toggle.isDrawerIndicatorEnabled = true
+        drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        //On Menu Icon Click Open Menu
-        menu_icon.setOnClickListener {
-            drawer.openDrawer(GravityCompat.START)
+        nav_menu.setNavigationItemSelectedListener(this)
+
+        setToolbarTitle("Home")
+        changeFragment(HomeFragment())
+
+
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        drawerLayout.closeDrawer((GravityCompat.START))
+        if (item.itemId == R.id.home){
+            setToolbarTitle("Home")
+            changeFragment(HomeFragment())
         }
 
-        var profileIcon = findViewById<ImageView>(R.id.profile_image)
+        when(item.itemId){
+            R.id.home -> {
+                setToolbarTitle("Home")
+                changeFragment(HomeFragment())
+            }
 
-        profileIcon.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
+            R.id.profile -> {
+                setToolbarTitle("Profile")
+                changeFragment(SettingsFragment())
+            }
+
+            R.id.chats -> {
+                setToolbarTitle("Chats")
+                changeFragment(ChatMainFragment())
+            }
+
+            R.id.people -> {
+                setToolbarTitle("People")
+                changeFragment(GroupsFragment())
+            }
+
+            R.id.conversations -> {
+                setToolbarTitle("Conversations")
+                changeFragment(IndividualsFragment())
+            }
+
+            R.id.logout -> {
+                setToolbarTitle("Logout")
+                changeFragment(LoginFragment())
+            }
+
         }
 
+        return true
     }
 
-    private fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fl_fragment, fragment)
-            .commit()
+    fun setToolbarTitle(title:String){
+        supportActionBar?.title = title
     }
 
-    val mOnNavigationItemSelectedListener = NavigationView.OnNavigationItemSelectedListener { item ->
-        when (item.itemId) {
-            R.id.home_menu -> {
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
-                drawer.closeDrawer(GravityCompat.START)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.profile_menu -> {
-                val intent = Intent(this, SettingsActivity::class.java)
-                startActivity(intent)
-                drawer.closeDrawer(GravityCompat.START)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.chats_menu -> {
-                val intent = Intent(this, ChatActivity::class.java)
-                startActivity(intent)
-                drawer.closeDrawer(GravityCompat.START)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.users_menu -> {
-                //Add Users Intent Activity Here
-                drawer.closeDrawer(GravityCompat.START)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.logout_menu -> {
-                val intent = Intent(this, AuthenticationActivity::class.java)
-                startActivity(intent)
-                drawer.closeDrawer(GravityCompat.START)
-                return@OnNavigationItemSelectedListener true
-            }
-        }
-        drawer.closeDrawer(GravityCompat.START)
-        false
+    fun changeFragment(frag: Fragment){
+        val fragment = supportFragmentManager.beginTransaction()
+        fragment.replace(R.id.fragment_container, frag).commit()
     }
-
-    override fun onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START)
-        } else {
-            super.onBackPressed()
-        }
-    }
-}
-
-    }
-
 
 }
-

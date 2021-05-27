@@ -19,7 +19,6 @@
             android:background="@color/blue2"
             app:titleTextColor="@color/own_black"
             android:elevation="4dp"
-            app:menu="@menu/navigation_menu"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>

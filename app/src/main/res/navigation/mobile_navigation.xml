@@ -15,7 +15,7 @@
         android:id="@+id/nav_gallery"
         android:name="com.example.poggerz.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_chat_main" />
 
     <fragment
         android:id="@+id/nav_slideshow"

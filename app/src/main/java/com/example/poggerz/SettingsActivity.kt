@@ -27,7 +27,7 @@ class SettingsActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
         wp_back_btn.setOnClickListener {
-            val intent = Intent(this, MessagesActivity::class.java)
+            val intent = Intent(this, ChatActivity::class.java)
             startActivity(intent)
         }
     }

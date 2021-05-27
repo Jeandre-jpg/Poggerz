@@ -1,141 +1,117 @@
 package com.example.poggerz
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
-import android.widget.LinearLayout
+import android.util.Log
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.poggerz.fragments.GroupsFragment
-import com.example.poggerz.fragments.IndividualsFragment
-import com.example.poggerz.model.Chat
-import com.example.poggerz.model.User
+import com.example.poggerz.model.Note
 import com.example.poggerz.utils.Constants
 import com.example.poggerz.utils.Firestore
+import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_chat.*
-import kotlinx.android.synthetic.main.activity_messages.*
-import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.chat_layout.*
-import java.text.SimpleDateFormat
-import java.time.Instant
-import java.time.LocalDateTime
-import java.util.*
 
-        class ChatActivity : AppCompatActivity() {
 
-            private val messagesdb = Firebase.firestore.collection(Constants.MESSAGES)
-            private val usersdb = Firebase.firestore.collection(Constants.USERS)
+class ChatActivity : AppCompatActivity() {
 
-            override fun onCreate(savedInstanceState: Bundle?) {
-                super.onCreate(savedInstanceState)
-                setContentView(R.layout.activity_chat)
+    private val notesdb = Firebase.firestore.collection(Constants.NOTES)
 
-                val individualsFragment = IndividualsFragment()
-                val groupsFragment = GroupsFragment()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-                //setting the default fragment
-                supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.fl_fragment, individualsFragment)
-                    commit()
-                }
 
-                tv_individuals.setOnClickListener {
-                    supportFragmentManager.beginTransaction().apply {
-                        replace(R.id.fl_fragment, individualsFragment)
-                        addToBackStack(null)
-                        commit()
-                    }
-                }
+        val userId = intent.getStringExtra(Constants.LOGGED_IN_ID)
 
-                tv_groups.setOnClickListener {
-                    supportFragmentManager.beginTransaction().apply {
-                        replace(R.id.fl_fragment, groupsFragment)
-                        addToBackStack(null)
-                        commit()
-                    }
-                }
+        if (userId != null) {
+            Firestore().getUserInfoById(this, userId)
+
+        } else {
+            startActivity(Intent(this, AuthenticationActivity::class.java))
+        }
 
 
 
-                //Prepare SharedPreferences
-                val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
-
-                val editor = sharedPref.edit()
-
-                //Get active userID from SharedPrefs
-                val userId = sharedPref.getString(Constants.LOGGED_IN_ID, "uidHash")!!
-
-                val loggedName = sharedPref.getString(Constants.LOGGED_IN_NAME, "null")
 
 
-                editor.apply{
-                    putString(Constants.LOGGED_IN_ID, userId)
-                    apply()
-                }
+        subscribeToNotesUpdates()
 
-                getUserObject(userId)
+        btn_add.setOnClickListener {
+            //getting input from user
+            val title = et_new_note.text.toString()
+            val note = Note(title, false)
 
-                send_card.setOnClickListener {
-                    val sdf = SimpleDateFormat("dd/MM/yyyy hh:mm:ss")
-                    val currentDate = sdf.format(Date())
-                    val content = message_content.text.toString()
-                    val chat = Chat( content, loggedName!!, currentDate, false)
-                  //  Firestore().sendMessage(this, chat)
-                }
+            Firestore().saveNote(this, note)
 
-                tb_messages.setNavigationOnClickListener {
-                    val intent = Intent(this, MessagesActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
+            et_new_note.text?.clear()
+        }
+    }
 
-                subcribeToChatUpdates()
+
+
+
+
+    fun setUserInfo(user: com.example.poggerz.model.User){
+        title = user.name
+    }
+
+
+
+
+
+
+
+    fun setToolbarTitle(title:String){
+        supportActionBar?.title = title
+    }
+
+    fun changeFragment(frag: Fragment){
+        val fragment = supportFragmentManager.beginTransaction()
+        fragment.replace(R.id.fl_fragment, frag).commit()
+    }
+
+    fun subscribeToNotesUpdates() {
+        notesdb.addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
+            error?.let {
+                Toast.makeText(this, error?.message, Toast.LENGTH_SHORT).show()
+                return@addSnapshotListener
+
             }
 
-            fun subcribeToChatUpdates(){
-                val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
-                val loggedName = sharedPref.getString(Constants.LOGGED_IN_NAME, "uidHash")!!
-                messagesdb.addSnapshotListener{querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
+            var notesList = mutableListOf<Note>()
 
-                    error?.let {
-                        Toast.makeText(this, error.message, Toast.LENGTH_SHORT).show()
-                    }
+            querySnapshot?.let {
 
-                    val chatList = mutableListOf<Chat>()
+                for (document in it) {
+                    val note = document.toObject<Note>()
 
-                    querySnapshot?.let{
-                        for (document in it){
-                            val chat = document.toObject<Chat>()
+                    notesList.add(note)
 
-                            chatList.add(chat)
-                        }
-                        chatList.sortByDescending { it.datetime }
-                        val recyclerView = findViewById<RecyclerView>(R.id.rvMessages)
-                        recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, true)
-                        val adapter = ChatAdapter(chatList, loggedName)
-                        recyclerView.adapter = adapter
-                    }
                 }
-            }
 
-            fun getUserObject(userId: String){
+                //adapter - add new list to recyclerview
+                val adapter = NoteAdapter(notesList)
+                rv_notes.adapter = adapter
+                rv_notes.layoutManager = LinearLayoutManager(this)
 
-                val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
-                val editor = sharedPref.edit()
-
-                usersdb.document(userId).get().addOnSuccessListener { document ->
-                    editor.apply{
-                        putString(Constants.LOGGED_IN_NAME, document.toObject(User::class.java)!!.name)
-                        apply()
+                for (dc in querySnapshot?.documentChanges) {
+                    when (dc.type) {
+                        DocumentChange.Type.ADDED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
+                        DocumentChange.Type.MODIFIED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
+                        DocumentChange.Type.REMOVED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
                     }
+
                 }
             }
         }
+
+
+    }
+}

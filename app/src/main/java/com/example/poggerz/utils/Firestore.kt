@@ -4,7 +4,7 @@ import android.content.ContentValues.TAG
 import android.util.Log
 import android.widget.Toast
 import com.example.poggerz.*
-import com.example.poggerz.model.Chat
+import com.example.poggerz.model.Note
 import com.example.poggerz.model.User
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
@@ -19,61 +19,60 @@ import java.lang.Exception
 
 class Firestore {
 
-//initiate our firestore
-private val db= FirebaseFirestore.getInstance()
+    //initiate our firestore
+    private val db= FirebaseFirestore.getInstance()
 
-fun registerUser(activity: AuthenticationActivity, userInfo: User){
-    //TODO: adding to firestore
+    fun registerUser(activity: AuthenticationActivity, userInfo: User){
+        //TODO: adding to firestore
 
-    db.collection(Constants.USERS)
-        .document(userInfo.id)
-        .set(userInfo, SetOptions.merge())
-        .addOnSuccessListener {}
+        db.collection(Constants.USERS)
+            .document(userInfo.id)
+            .set(userInfo, SetOptions.merge())
+            .addOnSuccessListener {}
 
-        .addOnFailureListener{
+            .addOnFailureListener{
 
-            activity.showErrorSnackBar("Error while registering the user", true)
+                activity.showErrorSnackBar("Error while registering the user", true)
 
-        }
-
-}
-
-fun getUserInfoById(activity: ProfileActivity, userId: String) {
-
-    db.collection(Constants.USERS)
-        .document(userId)
-        .get()
-        .addOnSuccessListener {document ->
-            if (document != null) {
-                val user: User = document.toObject(User::class.java)!!
-       //         activity.setUserInfoById(user)
-            }else {
-                Toast.makeText(activity, "The user Info is empty", Toast.LENGTH_SHORT).show()
             }
 
-        } .addOnFailureListener {exception ->
-            Log.d(TAG, " get dailed in ", exception)
-
-
-        }
-}
-
-private val poggerzdb = Firebase.firestore.collection(Constants.NOTES)
-
-fun saveNote(activity: MainActivity, chat: Chat) = CoroutineScope(Dispatchers.IO).launch{
-    try {
-        //add db
-        poggerzdb.add(chat).await()
-    }catch (e: Exception){
-        //handle error
-        withContext(Dispatchers.Main){
-            Toast.makeText(activity, e.message, Toast.LENGTH_LONG).show()
-        }
     }
 
-}
+    fun getUserInfoById(activity: ChatActivity, userId: String) {
+
+        db.collection(Constants.USERS)
+            .document(userId)
+            .get()
+            .addOnSuccessListener {document ->
+                if (document != null) {
+                    val user: User = document.toObject(User::class.java)!!
+                    activity.setUserInfo(user)
+                }else {
+                    Toast.makeText(activity, "The user Info is empty", Toast.LENGTH_SHORT).show()
+                }
+
+            } .addOnFailureListener {exception ->
+                Log.d(TAG, " get dailed in ", exception)
+
+
+            }
+    }
+
+    private val notesdb = Firebase.firestore.collection(Constants.NOTES)
+
+    fun saveNote(activity: ChatActivity, note: Note) = CoroutineScope(Dispatchers.IO).launch{
+        try {
+            //add db
+            notesdb.add(note).await()
+        }catch (e: Exception){
+            //handle error
+            withContext(Dispatchers.Main){
+                Toast.makeText(activity, e.message, Toast.LENGTH_LONG).show()
+            }
+        }
+
+    }
 
 
 }
-
 

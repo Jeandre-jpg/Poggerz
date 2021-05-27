@@ -44,20 +44,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="200dp"
         android:src="@drawable/icon_2d_third" />
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginLeft="20dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:fontFamily="@font/montserrat_regular"
-        android:gravity="center"
-        android:layout_marginTop="-80dp"
-        android:textStyle="bold"
-        android:text="Johhny"
-        android:textColor="@color/yellow"
-        android:textSize="15dp" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="75dp"
@@ -65,20 +52,7 @@
         android:layout_marginLeft="120dp"
         android:layout_marginTop="200dp"
         android:src="@drawable/icon_murdoc_first" />
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginLeft="120dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:fontFamily="@font/montserrat_regular"
-        android:gravity="center"
-        android:layout_marginTop="-80dp"
-        android:textStyle="bold"
-        android:text="Jane"
-        android:textColor="@color/yellow"
-        android:textSize="15dp" />
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="75dp"
@@ -86,20 +60,7 @@
         android:layout_marginLeft="220dp"
         android:layout_marginTop="200dp"
         android:src="@drawable/icon_noodle_first" />
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginLeft="220dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:fontFamily="@font/montserrat_regular"
-        android:gravity="center"
-        android:layout_marginTop="-80dp"
-        android:textStyle="bold"
-        android:text="Emily"
-        android:textColor="@color/yellow"
-        android:textSize="15dp" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="75dp"
@@ -107,20 +68,6 @@
         android:layout_marginLeft="320dp"
         android:layout_marginTop="200dp"
         android:src="@drawable/icon_russel_first" />
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginLeft="320dp"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:fontFamily="@font/montserrat_regular"
-        android:gravity="center"
-        android:layout_marginTop="-80dp"
-        android:textStyle="bold"
-        android:text="Kameron"
-        android:textColor="@color/yellow"
-        android:textSize="15dp" />
 
 <!--    </LinearLayout>-->
 
