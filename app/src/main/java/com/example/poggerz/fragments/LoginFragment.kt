@@ -10,8 +10,11 @@ import com.example.poggerz.R
 import com.example.poggerz.AuthenticationActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.android.synthetic.main.fragment_login.view.*
 import kotlinx.android.synthetic.main.fragment_register.*
+import kotlinx.android.synthetic.main.fragment_register.et_email
+import kotlinx.android.synthetic.main.fragment_register.et_password
 
 
 class LoginFragment : Fragment() {
@@ -26,6 +29,10 @@ class LoginFragment : Fragment() {
             (activity as AuthenticationActivity?)!!.loginUser(email, password)
 
         }
+
+
+
+
 
 
 

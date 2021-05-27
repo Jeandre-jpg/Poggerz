@@ -2,34 +2,20 @@ package com.example.poggerz
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.animation.AnimationUtils
-import android.widget.*
 import com.example.poggerz.fragments.LoginFragment
 import com.example.poggerz.fragments.RegisterFragment
 import com.example.poggerz.model.User
-import com.example.poggerz.utils.Constants
-import com.example.poggerz.utils.Firestore
+import com.example.poggerz.util.Firestore
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.android.synthetic.main.activity_authentication.*
 
 class AuthenticationActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authentication)
-
-        val ttb = AnimationUtils.loadAnimation(this, R.anim.ttb)
-
-        val ll_tab = findViewById(R.id.ll_tab) as LinearLayout
-        val tv_login = findViewById(R.id.tv_login) as TextView
-        val tv_register = findViewById(R.id.tv_register) as TextView
-        val fl_fragment = findViewById(R.id.fl_fragment) as FrameLayout
-
-        ll_tab.startAnimation(ttb)
-        tv_login.startAnimation(ttb)
-        tv_register.startAnimation(ttb)
-        fl_fragment.startAnimation(ttb)
 
 
         //reference to our fragments
@@ -59,7 +45,11 @@ class AuthenticationActivity : BaseActivity() {
                 commit()
             }
         }
+
+
+
     }
+
 
     fun registerUser(
         email: String,
@@ -73,29 +63,29 @@ class AuthenticationActivity : BaseActivity() {
         } else {
 
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(
-                            OnCompleteListener<AuthResult> { task ->
-                                if (task.isSuccessful) {
-                                    val firebaseUser: FirebaseUser = task.result!!.user!!
-                                    //testing
-                                    //   showErrorSnackBar("Successfully Registered user uid ${firebaseUser.uid}", false)
+                .addOnCompleteListener(
+                    OnCompleteListener<AuthResult> { task ->
+                        if (task.isSuccessful) {
+                            val firebaseUser: FirebaseUser = task.result!!.user!!
+                            //testing
+                            //   showErrorSnackBar("Successfully Registered user uid ${firebaseUser.uid}", false)
 
-                                    //Creates User Data
+                            //Creates User Data
 
-                                    val user = User(
-                                            firebaseUser.uid,
-                                            name,
-                                            email
-                                    )
+                            val user = User(
+                                firebaseUser.uid,
+                                name,
+                                email
+                            )
 
-                                    //Call Firestore
-                                    Firestore().registerUser(this, user)
+                            //Call Firestore
+                            Firestore().registerUser(this, user)
 
-                                } else {
-                                    showErrorSnackBar(task.exception!!.message.toString(), true)
-                                }
-                            }
-                    )
+                        } else {
+                            showErrorSnackBar(task.exception!!.message.toString(), true)
+                        }
+                    }
+                )
         }
     }
 
@@ -106,22 +96,22 @@ class AuthenticationActivity : BaseActivity() {
         } else {
 
             FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(
-                            OnCompleteListener<AuthResult> { task ->
-                                if (task.isSuccessful) {
-                                    val firebaseUser: FirebaseUser = task.result!!.user!!
+                .addOnCompleteListener(
+                    OnCompleteListener<AuthResult> { task ->
+                        if (task.isSuccessful) {
+                            val firebaseUser: FirebaseUser = task.result!!.user!!
 
-                                    //  showErrorSnackBar("Successfully Logged In user uid ${firebaseUser.uid}", false)
+                            //  showErrorSnackBar("Successfully Logged In user uid ${firebaseUser.uid}", false)
 
-                                    //TODO: add intent to navigate
+                            //TODO: add intent to navigate
 
-                                    loginUserSuccess(firebaseUser.uid)
+                            loginUserSuccess(firebaseUser.uid)
 
-                                } else {
-                                    showErrorSnackBar(task.exception!!.message.toString(), true)
-                                }
-                            }
-                    )
+                        } else {
+                            showErrorSnackBar(task.exception!!.message.toString(), true)
+                        }
+                    }
+                )
         }
 
     }
