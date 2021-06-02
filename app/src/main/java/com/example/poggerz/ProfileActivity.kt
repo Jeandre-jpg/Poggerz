@@ -4,7 +4,6 @@ import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.poggerz.utils.Constants
-import com.example.poggerz.utils.Firestore
 
 
 class ProfileActivity : AppCompatActivity() {

@@ -7,6 +7,8 @@ import android.util.Log
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.poggerz.fragments.GroupsFragment
+import com.example.poggerz.fragments.IndividualsFragment
 import com.example.poggerz.model.Note
 import com.example.poggerz.utils.Constants
 import com.example.poggerz.utils.Firestore
@@ -16,6 +18,8 @@ import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_authentication.*
+import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.chat_layout.*
 
 
@@ -25,10 +29,39 @@ class ChatActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.chat_layout)
+
+        //reference to our fragments
+        val groupsFragment = GroupsFragment()
+        val individualsFragment = IndividualsFragment()
+
+        //setting the default fragment
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fl_fragment, groupsFragment)
+            commit()
+        }
+
+        tv_group.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_fragment, groupsFragment)
+                addToBackStack(null)
+                commit()
+            }
+
+        }
+
+        tv_chat.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_fragment, individualsFragment)
+                addToBackStack(null)
+                commit()
+            }
+        }
 
 
-        val userId = intent.getStringExtra(Constants.LOGGED_IN_ID)
+
+
+    val userId = intent.getStringExtra(Constants.LOGGED_IN_ID)
 
         if (userId != null) {
             Firestore().getUserInfoById(this, userId)

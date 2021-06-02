@@ -3,7 +3,6 @@ package com.example.poggerz
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
-import com.example.poggerz.R
 import com.google.android.material.snackbar.Snackbar
 
 open class BaseActivity : AppCompatActivity() {
@@ -14,15 +13,15 @@ open class BaseActivity : AppCompatActivity() {
 
         if(errorMessage) {
             snackBarView.setBackgroundColor(
-                ContextCompat.getColor(
-                    this, R.color.red
-                )
+                    ContextCompat.getColor(
+                            this, R.color.design_default_color_error
+                    )
             )
         } else {
             snackBarView.setBackgroundColor(
-                ContextCompat.getColor(
-                    this, R.color.sea_foam
-                )
+                    ContextCompat.getColor(
+                            this, R.color.design_default_color_secondary
+                    )
             )
         }
         snackBar.show()

@@ -1,12 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/own_black"
-    tools:context="com.example.poggerz.fragments.GroupsFragment" >
-
-
+    tools:context=".AuthenticationActivity">
 
     <LinearLayout
         android:id="@+id/ll_tab"
@@ -19,32 +18,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/burger_menu"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="-100dp"
-            android:src="@drawable/ic_menu"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_individuals"
+            android:id="@+id/tv_chat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
             android:layout_weight="1"
+            android:layout_marginTop="80dp"
             android:fontFamily="@font/gorillaz_1"
             android:gravity="center"
             android:padding="10dp"
-            android:text="Individuals"
+            android:text="Chats"
             android:textColor="@color/own_black"
             android:textSize="24sp" />
 
         <TextView
             android:gravity="center"
-            android:id="@+id/tv_groups"
+            android:id="@+id/tv_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
@@ -69,5 +59,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll_tab" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

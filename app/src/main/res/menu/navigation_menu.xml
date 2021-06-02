@@ -4,6 +4,10 @@
     <item
         android:id="@+id/home"
         android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/signin"
+        android:icon="@drawable/ic_logout"
         android:title="Sign In" />
     <item
         android:id="@+id/profile"
@@ -19,9 +23,9 @@
         android:title="Chats" />
 
     <item
-        android:id="@+id/conversations"
+        android:id="@+id/groups"
         android:icon="@drawable/ic_speech"
-        android:title="Conversations" />
+        android:title="Groups" />
     <item
         android:id="@+id/logout"
         android:icon="@drawable/ic_logout"
