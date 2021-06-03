@@ -87,6 +87,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragment.replace(R.id.fragment_container, frag).commit()
     }
 
+    fun navigateToChats(){
+
+    }
 
 
 }

@@ -29,7 +29,7 @@ class ChatActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.chat_layout)
+        setContentView(R.layout.activity_chat)
 
         //reference to our fragments
         val groupsFragment = GroupsFragment()
@@ -37,26 +37,26 @@ class ChatActivity : AppCompatActivity() {
 
         //setting the default fragment
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fl_fragment, groupsFragment)
+            replace(R.id.fl_fragment_chat, individualsFragment)
             commit()
         }
 
-        tv_group.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fl_fragment, groupsFragment)
-                addToBackStack(null)
-                commit()
-            }
-
-        }
-
-        tv_chat.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fl_fragment, individualsFragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
+//        tv_group.setOnClickListener {
+//            supportFragmentManager.beginTransaction().apply {
+//                replace(R.id.fl_fragment, groupsFragment)
+//                addToBackStack(null)
+//                commit()
+//            }
+//
+//        }
+//
+//        tv_chat.setOnClickListener {
+//            supportFragmentManager.beginTransaction().apply {
+//                replace(R.id.fl_fragment, individualsFragment)
+//                addToBackStack(null)
+//                commit()
+//            }
+//        }
 
 
 
@@ -67,7 +67,7 @@ class ChatActivity : AppCompatActivity() {
             Firestore().getUserInfoById(this, userId)
 
         } else {
-            startActivity(Intent(this, AuthenticationActivity::class.java))
+            startActivity(Intent(this, ChatActivity::class.java))
         }
 
 
@@ -76,15 +76,15 @@ class ChatActivity : AppCompatActivity() {
 
         subscribeToNotesUpdates()
 
-        btn_add.setOnClickListener {
-            //getting input from user
-            val title = et_new_note.text.toString()
-            val note = Note(title, false)
-
-            Firestore().saveNote(this, note)
-
-            et_new_note.text?.clear()
-        }
+//        btn_add.setOnClickListener {
+//            //getting input from user
+//            val title = et_new_note.text.toString()
+//            val note = Note(title, false)
+//
+//            Firestore().saveNote(this, note)
+//
+//            et_new_note.text?.clear()
+//        }
     }
 
 
@@ -130,16 +130,16 @@ class ChatActivity : AppCompatActivity() {
                 }
 
                 //adapter - add new list to recyclerview
-                val adapter = NoteAdapter(notesList)
-                rv_notes.adapter = adapter
-                rv_notes.layoutManager = LinearLayoutManager(this)
-
-                for (dc in querySnapshot?.documentChanges) {
-                    when (dc.type) {
-                        DocumentChange.Type.ADDED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
-                        DocumentChange.Type.MODIFIED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
-                        DocumentChange.Type.REMOVED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
-                    }
+//                val adapter = NoteAdapter(notesList)
+//                rv_notes.adapter = adapter
+//                rv_notes.layoutManager = LinearLayoutManager(this)
+//
+//                for (dc in querySnapshot?.documentChanges) {
+//                    when (dc.type) {
+//                        DocumentChange.Type.ADDED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
+//                        DocumentChange.Type.MODIFIED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
+//                        DocumentChange.Type.REMOVED -> Log.d("snapshotChanges", "New Note: " + dc.document.data)
+//                    }
 
                 }
             }
@@ -147,4 +147,4 @@ class ChatActivity : AppCompatActivity() {
 
 
     }
-}
+//}
