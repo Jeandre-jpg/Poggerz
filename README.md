@@ -89,9 +89,7 @@ An Android closed-group Chat Application about all things about the band, Gorril
 
 ### Project Description
 
-Movies and Films have always been a part of human history and pop culture that works together to make remberal moments in our lifes. But what goes behind the movies? What novels were most famous films based off of, from where is that famous one-liner from and other questions like who played that one guy in that one movie again?
-
-With Films.Ly the user will be put to the challenge on their cinematic movie knowledge through a fun and interactive quiz application!
+An Android closed-group Chat Application about all things about the band, Gorrilaz. This app uses Kotlin and Google Firebase. The app focuses on the British Band, Gorillaz. The band was created by Damon Albarn from the Britpop band Blur and Jamie Hewlett. Their style is reminiscent of 80's dance music with strong influences from hip-hop, dub, electro, and pop (Gorillaz 1998). 
 
 # Mockups
 
