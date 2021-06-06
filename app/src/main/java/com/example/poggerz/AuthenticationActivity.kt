@@ -2,15 +2,20 @@ package com.example.poggerz
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import com.example.poggerz.fragments.LoginFragment
 import com.example.poggerz.fragments.RegisterFragment
 import com.example.poggerz.model.User
 import com.example.poggerz.utils.Constants
 import com.example.poggerz.utils.Firestore
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.activity_authentication.*
 
 class AuthenticationActivity : BaseActivity() {
@@ -107,6 +112,9 @@ class AuthenticationActivity : BaseActivity() {
         }
 
     }
+
+
+
 
     fun registerUserSuccess(uid: String) {
         showErrorSnackBar("Success on Registration", false)

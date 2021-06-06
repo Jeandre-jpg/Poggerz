@@ -6,24 +6,6 @@
     android:background="@drawable/wallpaper"
     tools:context="com.example.poggerz.fragments.HomeFragment" >
 
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:padding="30dp"
-        android:backgroundTint="@color/own_black"
-        android:background="@drawable/ic_logout"/>
-
-    <Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="350dp"
-        android:padding="30dp"
-        android:backgroundTint="@color/own_black"
-        android:background="@drawable/ic_settings"/>
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="600dp"

@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/own_white"
+    android:background="@drawable/splash"
     android:padding="20dp"
     tools:context="com.example.poggerz.SplashActivity">
 
 
     <ImageView
         android:id="@+id/logo_app"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,17 +39,17 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/start_btn"
             android:layout_width="150dp"
+            app:cornerRadius="20dp"
+            android:layout_marginTop="50dp"
             android:layout_height="50dp"
             android:background="#FFFFFF"
             android:fontFamily="@font/montserrat_regular"
             android:text="Start"
             style="@style/Widget.MaterialComponents.Button"
-            app:cornerRadius="50dp"
             android:textColor="@color/own_white"
             android:textStyle="bold"
-            app:backgroundTint="@color/army_green"
+            app:backgroundTint="@color/own_black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="524dp" />
+            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
