@@ -15,7 +15,6 @@ import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_settings.*
 import kotlinx.android.synthetic.main.activity_splash.*
 import kotlinx.android.synthetic.main.content_main.*
 
@@ -87,11 +86,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         return true
-
-        wp_back_btn.setOnClickListener {
-            val intent = Intent(this, HomeFragment::class.java)
-            startActivity(intent)
-        }
+//
+//        wp_back_btn.setOnClickListener {
+//            val intent = Intent(this, HomeFragment::class.java)
+//            startActivity(intent)
+//        }
 
     }
 

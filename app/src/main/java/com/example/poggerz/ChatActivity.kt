@@ -1,6 +1,6 @@
 package com.example.poggerz
 
-import android.content.Intent
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.poggerz.model.Note
+import com.example.poggerz.model.User
 import com.example.poggerz.utils.Constants
 import com.example.poggerz.utils.Firestore
 import com.google.firebase.firestore.DocumentChange
@@ -17,31 +18,39 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_authentication.*
+import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.chat_layout.*
-
+import java.util.*
 
 class ChatActivity : AppCompatActivity() {
 
     private val notesdb = Firebase.firestore.collection(Constants.NOTES)
+    private val usersdb = Firebase.firestore.collection(Constants.USERS)
+    private val messagesdb = Firebase.firestore.collection(Constants.MESSAGES)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chat_layout)
 
+//    val userId = intent.getStringExtra(Constants.LOGGED_IN_ID)
+//
+//        if (userId != null) {
+//            Firestore().getUserInfoById(this, userId)
+//
+//        } else {
+//            startActivity(Intent(this, ChatActivity::class.java))
+//        }
 
+        val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
 
-    val userId = intent.getStringExtra(Constants.LOGGED_IN_ID)
+        val userId = sharedPref.getString(Constants.LOGGED_IN_ID, "uidHash")!!
+        val loggedName = sharedPref.getString(Constants.LOGGED_IN_NAME, "null")
 
-        if (userId != null) {
-            Firestore().getUserInfoById(this, userId)
-
-        } else {
-            startActivity(Intent(this, ChatActivity::class.java))
+        editor.apply{
+            putString(Constants.LOGGED_IN_ID, userId)
+            apply()
         }
-
-
-
-
 
         subscribeToNotesUpdates()
 
@@ -80,7 +89,9 @@ class ChatActivity : AppCompatActivity() {
     }
 
     fun subscribeToNotesUpdates() {
-        notesdb.addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
+        val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+        val loggedName = sharedPref.getString(Constants.LOGGED_IN_NAME, "uidHash")!!
+        messagesdb.addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
             error?.let {
                 Toast.makeText(this, error?.message, Toast.LENGTH_SHORT).show()
                 return@addSnapshotListener
@@ -114,6 +125,22 @@ class ChatActivity : AppCompatActivity() {
             }
         }
 
+        fun getUserObject(userId: String){
+
+            val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+            val editor = sharedPref.edit()
+
+            usersdb.document(userId).get().addOnSuccessListener { document ->
+                editor.apply{
+                    putString(Constants.LOGGED_IN_NAME, document.toObject(User::class.java)!!.name)
+                    apply()
+                }
+            }
+        }
+    }
+
 
     }
-}
+
+
+

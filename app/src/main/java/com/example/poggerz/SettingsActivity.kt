@@ -7,7 +7,6 @@ import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.poggerz.fragments.SettingsFragment
-import kotlinx.android.synthetic.main.activity_settings.*
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -26,9 +25,9 @@ class SettingsActivity : AppCompatActivity() {
         //Make the View FullScreen
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        wp_back_btn.setOnClickListener {
-            val intent = Intent(this, ChatActivity::class.java)
-            startActivity(intent)
-        }
+//        wp_back_btn.setOnClickListener {
+//            val intent = Intent(this, ChatActivity::class.java)
+//            startActivity(intent)
+//        }
     }
 }
