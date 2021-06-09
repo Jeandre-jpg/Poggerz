@@ -22,7 +22,7 @@
         android:id="@+id/et_new_note"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="New Note"
+        android:hint="Type a New Message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_add"
         app:layout_constraintStart_toStartOf="parent" />
@@ -31,7 +31,7 @@
         android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:text="Send"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

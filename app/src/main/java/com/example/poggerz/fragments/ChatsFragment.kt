@@ -10,7 +10,9 @@ import androidx.fragment.app.Fragment
 import com.example.poggerz.ChatActivity
 import com.example.poggerz.R
 import com.example.poggerz.utils.Constants
+import kotlinx.android.synthetic.main.fragment_groups.*
 import kotlinx.android.synthetic.main.fragment_individuals.*
+import kotlinx.android.synthetic.main.fragment_individuals.btn_one
 
 class ChatsFragment : Fragment() {
     // TODO: Rename and change types of parameters
@@ -25,17 +27,17 @@ class ChatsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        val view: View = inflater!!.inflate(R.layout.fragment_individuals, container, false)
+        val view: View = inflater!!.inflate(R.layout.fragment_groups, container, false)
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btn_one.setOnClickListener {
+        btn_group_one.setOnClickListener {
             Log.d("Test Button", "Button one clicked")
             val intent = Intent (getActivity(), ChatActivity::class.java)
-            intent.putExtra("chatId", "1")
+            intent.putExtra("chatId", "lore")
             requireActivity().startActivity(intent)
 
         }

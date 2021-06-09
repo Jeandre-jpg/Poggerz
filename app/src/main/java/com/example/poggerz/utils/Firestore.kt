@@ -5,8 +5,7 @@ import android.util.Log
 import android.widget.Toast
 import com.example.poggerz.AuthenticationActivity
 import com.example.poggerz.ChatActivity
-import com.example.poggerz.model.Messages
-import com.example.poggerz.model.Note
+import com.example.poggerz.model.Chats
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.example.poggerz.model.User
@@ -61,11 +60,11 @@ class Firestore {
     }
 
 
-    private val  messagesdb = Firebase.firestore.collection(Constants.MESSAGES)
+    private val  messagesdb = Firebase.firestore.collection(Constants.CHATS)
 
-    fun sendMessage(activity: ChatActivity, messages: Messages) = CoroutineScope(Dispatchers.IO).launch {
+    fun saveMessage(activity: ChatActivity, messages: Chats, chatId: String) = CoroutineScope(Dispatchers.IO).launch {
         try {
-            messagesdb.add(messages).await()
+            messagesdb.document(chatId).collection("messages").add(messages).await()
         } catch (e: Exception){
             withContext(Dispatchers.Main){
                 Toast.makeText(activity, e.message, Toast.LENGTH_LONG).show()

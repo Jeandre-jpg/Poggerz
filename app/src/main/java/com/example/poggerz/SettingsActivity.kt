@@ -13,7 +13,7 @@ class SettingsActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+        setContentView(R.layout.fragment_settings)
 
         val settingsFragment = SettingsFragment()
 

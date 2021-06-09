@@ -2,13 +2,13 @@ package com.example.poggerz
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Message
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.poggerz.model.Note
-import com.example.poggerz.model.User
+import com.example.poggerz.model.Chats
 import com.example.poggerz.utils.Constants
 import com.example.poggerz.utils.Firestore
 import com.google.firebase.firestore.DocumentChange
@@ -18,21 +18,20 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_authentication.*
-import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.chat_layout.*
 import java.util.*
 
 class ChatActivity : AppCompatActivity() {
 
-    private val notesdb = Firebase.firestore.collection(Constants.NOTES)
-    private val usersdb = Firebase.firestore.collection(Constants.USERS)
-    private val messagesdb = Firebase.firestore.collection(Constants.MESSAGES)
+    private val messagesdb = Firebase.firestore.collection(Constants.CHATS)
+
+    private var chatId = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chat_layout)
 
-//    val userId = intent.getStringExtra(Constants.LOGGED_IN_ID)
+     chatId = intent.getStringExtra("chatId").toString()
 //
 //        if (userId != null) {
 //            Firestore().getUserInfoById(this, userId)
@@ -52,16 +51,18 @@ class ChatActivity : AppCompatActivity() {
             apply()
         }
 
-        subscribeToNotesUpdates()
+
+
+        subscribeToChatsUpdates()
 
         btn_add.setOnClickListener {
             //getting input from user
-            val title = et_new_note.text.toString()
-            val note = Note(title, false)
+            val content = et_new_note.text.toString()
+            val message = Chats(content, "Jeandré")
 
-            Firestore().saveNote(this, note)
+          Firestore().saveMessage(this, message, chatId)
 
-            et_new_note.text?.clear()
+            et_new_note.text.clear()
         }
     }
 
@@ -88,29 +89,27 @@ class ChatActivity : AppCompatActivity() {
         fragment.replace(R.id.fl_fragment, frag).commit()
     }
 
-    fun subscribeToNotesUpdates() {
-        val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
-        val loggedName = sharedPref.getString(Constants.LOGGED_IN_NAME, "uidHash")!!
-        messagesdb.addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
+    fun subscribeToChatsUpdates() {
+        messagesdb.document(chatId).collection("messages").addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
             error?.let {
                 Toast.makeText(this, error?.message, Toast.LENGTH_SHORT).show()
                 return@addSnapshotListener
 
             }
 
-            var notesList = mutableListOf<Note>()
+            var messagesList = mutableListOf<Chats>()
 
             querySnapshot?.let {
 
                 for (document in it) {
-                    val note = document.toObject<Note>()
+                    val message = document.toObject<Chats>()
 
-                    notesList.add(note)
+                    messagesList.add(message)
 
                 }
 
                 //adapter - add new list to recyclerview
-                val adapter = NoteAdapter(notesList)
+                val adapter = MessagesAdapter(messagesList)
                 rv_notes.adapter = adapter
                 rv_notes.layoutManager = LinearLayoutManager(this)
 
@@ -125,22 +124,6 @@ class ChatActivity : AppCompatActivity() {
             }
         }
 
-        fun getUserObject(userId: String){
-
-            val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
-            val editor = sharedPref.edit()
-
-            usersdb.document(userId).get().addOnSuccessListener { document ->
-                editor.apply{
-                    putString(Constants.LOGGED_IN_NAME, document.toObject(User::class.java)!!.name)
-                    apply()
-                }
-            }
-        }
-    }
-
 
     }
-
-
-
+}

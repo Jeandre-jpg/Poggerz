@@ -63,10 +63,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 changeFragment(ProfileFragment())
             }
 
-            R.id.people -> {
-                setToolbarTitle("People")
-                changeFragment(PeopleFragment())
-            }
 
             R.id.chats -> {
                 setToolbarTitle("Chats")

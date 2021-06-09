@@ -13,10 +13,7 @@
         android:id="@+id/profile"
         android:icon="@drawable/user"
         android:title="Profile" />
-    <item
-        android:id="@+id/people"
-        android:icon="@drawable/ic_group"
-        android:title="People" />
+
     <item
         android:id="@+id/chats"
         android:icon="@drawable/ic_individual_chat"
