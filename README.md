@@ -157,6 +157,19 @@ Open `Android Studio` and select `File | Open...` from the menu. Select cloned d
 
 ### Mockups
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/55391556/121585413-d83d3e80-ca32-11eb-886d-9ae4f4c7e91a.jpg"
+     </p>
+  
+  <p align="center">
+<img src="https://user-images.githubusercontent.com/55391556/121586792-5ea65000-ca34-11eb-8a0c-91b34d40939b.jpg"
+     </p>
+    
+     <p align="center">
+<img src="https://user-images.githubusercontent.com/55391556/121586915-83022c80-ca34-11eb-9a60-faace1c5fdf9.jpg"
+     </p>
+
+
 ## Concept Process
 
 ### Ideation
@@ -238,7 +251,11 @@ Open `Android Studio` and select `File | Open...` from the menu. Select cloned d
 
 #### First Draft Demonstration:
 
+https://drive.google.com/file/d/1l885DB1OBNf81lN5JT6SsOOvrbGCqoZ7/view?usp=sharing
+
 #### Final Video Demonstration:
+
+
 
 #### Download
 
