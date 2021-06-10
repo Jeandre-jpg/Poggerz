@@ -158,15 +158,11 @@ Open `Android Studio` and select `File | Open...` from the menu. Select cloned d
 ### Mockups
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/55391556/121585413-d83d3e80-ca32-11eb-886d-9ae4f4c7e91a.jpg"
-     </p>
-  
-  <p align="center">
-<img src="https://user-images.githubusercontent.com/55391556/121586792-5ea65000-ca34-11eb-8a0c-91b34d40939b.jpg"
-     </p>
-    
-     <p align="center">
-<img src="https://user-images.githubusercontent.com/55391556/121586915-83022c80-ca34-11eb-9a60-faace1c5fdf9.jpg"
+<img src="https://user-images.githubusercontent.com/55391556/121585413-d83d3e80-ca32-11eb-886d-9ae4f4c7e91a.jpg">
+
+<img src="https://user-images.githubusercontent.com/55391556/121586792-5ea65000-ca34-11eb-8a0c-91b34d40939b.jpg">
+
+<img src="https://user-images.githubusercontent.com/55391556/121586915-83022c80-ca34-11eb-9a60-faace1c5fdf9.jpg">
      </p>
 
 
@@ -176,14 +172,14 @@ Open `Android Studio` and select `File | Open...` from the menu. Select cloned d
 
 <p align="center">
    
- <img src="https://user-images.githubusercontent.com/55391556/121406565-95119b80-c95e-11eb-9b6d-f8729d04ec97.jpeg" width="240"/> 
- <h3>Chatrooms and Application</h3>
+ <img src="https://user-images.githubusercontent.com/55391556/121406565-95119b80-c95e-11eb-9b6d-f8729d04ec97.jpeg" width="340"/> 
+
  
- <img src="https://user-images.githubusercontent.com/55391556/121406584-9b077c80-c95e-11eb-94fd-67e51f2689d0.jpeg" width="240"/> 
- <h3>Settings/ Profile</h3>
+ <img src="https://user-images.githubusercontent.com/55391556/121406584-9b077c80-c95e-11eb-94fd-67e51f2689d0.jpeg" width="340"/> 
+
  
- <img src="https://user-images.githubusercontent.com/55391556/121406587-9ba01300-c95e-11eb-872e-2a03938bc787.jpeg" width="240"/> 
-  <h3>Sign In and Sign Up</h3>
+ <img src="https://user-images.githubusercontent.com/55391556/121406587-9ba01300-c95e-11eb-872e-2a03938bc787.jpeg" width="340"/> 
+
 </p>
 
 ### Wireframes
@@ -197,7 +193,7 @@ Open `Android Studio` and select `File | Open...` from the menu. Select cloned d
 ### Database ERD
 
 <p align="center">
- <img src="https://user-images.githubusercontent.com/55391556/121410017-6d243700-c962-11eb-9b46-710c551e5ac9.jpg" width="240"/> 
+ <img src="https://user-images.githubusercontent.com/55391556/121410017-6d243700-c962-11eb-9b46-710c551e5ac9.jpg"/> 
 </p>
    
 
@@ -255,9 +251,17 @@ https://drive.google.com/file/d/1l885DB1OBNf81lN5JT6SsOOvrbGCqoZ7/view?usp=shari
 
 #### Final Video Demonstration:
 
+https://drive.google.com/file/d/1ghuS0V7ykHaFsT_y7m59Mp_71vfmKwB4/view?usp=sharing
+
+
+#### Promotional Video:
+
+https://drive.google.com/file/d/1-9a9jOXlrwVrP0Mx_Cw39aT4ZL6Qz5fY/view?usp=sharing
 
 
 #### Download
+
+https://github.com/Jeandre-jpg/Poggerz.git
 
 ## Roadmap
 
@@ -274,13 +278,13 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Authors
 
-<h3> Hi! My name is Jeandré</h3>
+#### Hi! My name is Jeandré
 I'm currently Studying Interaction Design and Interactive Development.
 
-<h3>Interests Include: </h3>
+#### Interests Include:
 Gorillaz, Gaming and Art, UI and UX design, App and Web Development
 
-<h3>My Goals are: </h3>
+#### My Goals are:
 Successful web designer and developer.
 
 
@@ -300,7 +304,7 @@ Email - 190025@virtualwindow.co.za
 Project Link: [https://github.com/Jeandre-jpg/Poggerz](https://github.com/Jeandre-jpg/Poggerz)
 
 
-## Acknowledgments
+## Acknowledgements
 * [SmallAcademy](https://www.youtube.com/c/SmallAcademy)
 * [Reso Coder](https://www.youtube.com/channel/UCSIvrn68cUk8CS8MbtBmBkA)
 * [Firebase Documentation](https://firebase.google.com/docs/firestore/query-data/get-data?authuser=1)
