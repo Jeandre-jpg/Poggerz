@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         Firebase.auth.signOut()
 
+
+
         var toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close)
         toggle.isDrawerIndicatorEnabled = true
         drawerLayout.addDrawerListener(toggle)

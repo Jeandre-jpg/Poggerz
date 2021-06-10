@@ -17,6 +17,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import java.lang.Exception
+import java.text.SimpleDateFormat
+import java.util.*
 
 class Firestore {
 
@@ -39,6 +41,8 @@ class Firestore {
 
     }
 
+    val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+
     fun getUserInfoById(activity: ChatActivity, userId: String) {
 
         db.collection(Constants.USERS)
@@ -58,6 +62,8 @@ class Firestore {
 
                 }
     }
+
+
 
 
     private val  messagesdb = Firebase.firestore.collection(Constants.CHATS)

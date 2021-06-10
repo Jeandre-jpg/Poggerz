@@ -1,13 +1,12 @@
 package com.example.poggerz
 
-import android.os.Message
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.poggerz.model.Chats
 import kotlinx.android.synthetic.main.item_note.view.*
-
+import java.text.DateFormat
 
 
 class MessagesAdapter(
@@ -15,6 +14,7 @@ class MessagesAdapter(
 ) : RecyclerView.Adapter<MessagesAdapter.NoteViewHolder>() {
 
     inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
 
 
     //identify the item that needs to be reused
@@ -32,7 +32,8 @@ class MessagesAdapter(
 
         holder.itemView.apply{
             message_contents.text = messages[position].message
-            message_time.text = messages[position].sender
+            sender.text = messages[position].sender
+            message_time.text = messages[position].timestamp.toString()
 
         }
     }

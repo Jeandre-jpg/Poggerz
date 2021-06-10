@@ -22,6 +22,14 @@
         android:src="@drawable/icon_2d_third"
         app:civ_border_color="@color/white"
         app:civ_border_width="2dp" />
+    <TextView
+        android:id="@+id/sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sender"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/own_black"
+        android:textSize="12sp"/>
         <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,7 +68,9 @@
                         android:text="09:00"
                         android:textColor="@color/own_white"
                         android:textSize="12sp"/>
+
                 </LinearLayout>
+
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 </LinearLayout>

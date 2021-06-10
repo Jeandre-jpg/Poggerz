@@ -42,6 +42,30 @@ class ChatsFragment : Fragment() {
 
         }
 
+        btn_group_two.setOnClickListener {
+            Log.d("Test Button", "Button one clicked")
+            val intent = Intent (getActivity(), ChatActivity::class.java)
+            intent.putExtra("chatId", "characters")
+            requireActivity().startActivity(intent)
+
+        }
+
+        btn_group_three.setOnClickListener {
+            Log.d("Test Button", "Button one clicked")
+            val intent = Intent (getActivity(), ChatActivity::class.java)
+            intent.putExtra("chatId", "phases")
+            requireActivity().startActivity(intent)
+
+        }
+
+        btn_group_four.setOnClickListener {
+            Log.d("Test Button", "Button one clicked")
+            val intent = Intent (getActivity(), ChatActivity::class.java)
+            intent.putExtra("chatId", "music_style")
+            requireActivity().startActivity(intent)
+
+        }
+
     }
 
 

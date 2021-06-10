@@ -2,7 +2,6 @@ package com.example.poggerz
 
 import android.content.Context
 import android.os.Bundle
-import android.os.Message
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.poggerz.model.Chats
 import com.example.poggerz.utils.Constants
 import com.example.poggerz.utils.Firestore
+import com.google.firebase.database.*
 import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.QuerySnapshot
@@ -19,17 +19,32 @@ import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_authentication.*
 import kotlinx.android.synthetic.main.chat_layout.*
+import java.text.SimpleDateFormat
 import java.util.*
+
 
 class ChatActivity : AppCompatActivity() {
 
     private val messagesdb = Firebase.firestore.collection(Constants.CHATS)
-
+    val ref = FirebaseDatabase.getInstance().getReference("Date")
     private var chatId = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.chat_layout)
+
+//       ref.setValue(ServerValue.TIMESTAMP)
+//        val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+//        ref.addListenerForSingleValueEvent(object: ValueEventListener{
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                TODO("Not yet implemented")
+//                ref.setValue(sdf.format(snapshot.value))
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//
+//            }
+//        })
 
      chatId = intent.getStringExtra("chatId").toString()
 //
@@ -58,7 +73,7 @@ class ChatActivity : AppCompatActivity() {
         btn_add.setOnClickListener {
             //getting input from user
             val content = et_new_note.text.toString()
-            val message = Chats(content, "Jeandré")
+            val message = Chats(content, "")
 
           Firestore().saveMessage(this, message, chatId)
 
@@ -78,8 +93,6 @@ class ChatActivity : AppCompatActivity() {
 
 
 
-
-
     fun setToolbarTitle(title:String){
         supportActionBar?.title = title
     }
@@ -89,8 +102,9 @@ class ChatActivity : AppCompatActivity() {
         fragment.replace(R.id.fl_fragment, frag).commit()
     }
 
+
     fun subscribeToChatsUpdates() {
-        messagesdb.document(chatId).collection("messages").addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
+        messagesdb.document(chatId).collection("messages").orderBy("timestamp").addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
             error?.let {
                 Toast.makeText(this, error?.message, Toast.LENGTH_SHORT).show()
                 return@addSnapshotListener
@@ -108,10 +122,11 @@ class ChatActivity : AppCompatActivity() {
 
                 }
 
-                //adapter - add new list to recyclerview
+
+                rv_notes.layoutManager = LinearLayoutManager(this)
                 val adapter = MessagesAdapter(messagesList)
                 rv_notes.adapter = adapter
-                rv_notes.layoutManager = LinearLayoutManager(this)
+
 
                 for (dc in querySnapshot?.documentChanges) {
                     when (dc.type) {
