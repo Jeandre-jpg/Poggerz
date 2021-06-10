@@ -104,7 +104,7 @@ class ChatActivity : AppCompatActivity() {
 
 
     fun subscribeToChatsUpdates() {
-        messagesdb.document(chatId).collection("messages").orderBy("timestamp").addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
+        messagesdb.document(chatId).collection("messages").orderBy("timestamp").limit(50).addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
             error?.let {
                 Toast.makeText(this, error?.message, Toast.LENGTH_SHORT).show()
                 return@addSnapshotListener

@@ -32,15 +32,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/ChatActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/ChatActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/MessagesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/MessagesAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/fragments/GroupsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/fragments/GroupsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/model/Chats.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/model/Chats.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/utils/Firestore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/utils/Firestore.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_note.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_note.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/SettingsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/SettingsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/fragments/ProfileFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/fragments/ProfileFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/fragments/SettingsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/fragments/SettingsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +137,9 @@
       <recent name="com.example.poggerz" />
       <recent name="com.example.poggerz.fragments" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.poggerz" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/java/com/example/poggerz/model" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/example/poggerz" />
@@ -150,64 +152,6 @@
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="Poggerz.app" />
-      <option name="DEPLOY" value="true" />
-      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
-      <option name="DEPLOY_AS_INSTANT" value="false" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ALL_USERS" value="true" />
-      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
-        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
-        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
-      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -267,14 +211,22 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="628" y="149" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.25.1440.875@0.25.1440.875" timestamp="1623141789292" />
+    <state x="287" y="405" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1623315113590">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="287" y="405" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.25.1440.875@0.25.1440.875" timestamp="1623315113590" />
+    <state x="568" y="362" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1623315115202">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="568" y="362" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.25.1440.875@0.25.1440.875" timestamp="1623315115202" />
     <state x="544" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623187870085">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="544" y="184" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.875@0.25.1440.875" timestamp="1623187870085" />
-    <state x="450" y="258" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1622461004013">
+    <state x="450" y="258" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1623315002305">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="450" y="258" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.25.1440.875@0.25.1440.875" timestamp="1622461004013" />
+    <state x="450" y="258" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.25.1440.875@0.25.1440.875" timestamp="1623315002305" />
     <state x="344" y="153" width="925" height="560" key="AVDManager" timestamp="1620230327826">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -287,22 +239,22 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="577" y="223" key="AndroidCreateResourceFileDialog/0.25.1440.875@0.25.1440.875" timestamp="1621420534915" />
-    <state width="1350" height="44" key="GridCell.Tab.0.bottom" timestamp="1623283555321">
+    <state width="1350" height="139" key="GridCell.Tab.0.bottom" timestamp="1623288831815">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1350" height="44" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1623283555321" />
-    <state width="1350" height="44" key="GridCell.Tab.0.center" timestamp="1623283555321">
+    <state width="1350" height="139" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1623288831815" />
+    <state width="1350" height="139" key="GridCell.Tab.0.center" timestamp="1623288831814">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1350" height="44" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1623283555321" />
-    <state width="1350" height="44" key="GridCell.Tab.0.left" timestamp="1623283555320">
+    <state width="1350" height="139" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1623288831814" />
+    <state width="1350" height="139" key="GridCell.Tab.0.left" timestamp="1623288831814">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1350" height="44" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1623283555320" />
-    <state width="1350" height="44" key="GridCell.Tab.0.right" timestamp="1623283555321">
+    <state width="1350" height="139" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1623288831814" />
+    <state width="1350" height="139" key="GridCell.Tab.0.right" timestamp="1623288831815">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state width="1350" height="44" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1623283555321" />
+    <state width="1350" height="139" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1623288831815" />
     <state x="349" y="160" key="IDE.errors.dialog" timestamp="1622461557850">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
@@ -319,14 +271,14 @@
       <screen x="0" y="25" width="1440" height="875" />
     </state>
     <state x="516" y="246" key="com.android.tools.idea.run.deployment.ModifyDeviceSetDialog/0.25.1440.875@0.25.1440.875" timestamp="1620224930397" />
-    <state x="403" y="74" width="615" height="777" key="find.popup" timestamp="1623185282966">
+    <state x="403" y="74" width="663" height="777" key="find.popup" timestamp="1623316933216">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="403" y="74" width="615" height="777" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1623185282966" />
-    <state x="665" y="219" key="refactoring.ChangeSignatureDialog" timestamp="1623281141675">
+    <state x="403" y="74" width="663" height="777" key="find.popup/0.25.1440.875@0.25.1440.875" timestamp="1623316933216" />
+    <state x="665" y="219" key="refactoring.ChangeSignatureDialog" timestamp="1623319990773">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
-    <state x="665" y="219" key="refactoring.ChangeSignatureDialog/0.25.1440.875@0.25.1440.875" timestamp="1623281141675" />
+    <state x="665" y="219" key="refactoring.ChangeSignatureDialog/0.25.1440.875@0.25.1440.875" timestamp="1623319990773" />
     <state x="421" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1623185215285">
       <screen x="0" y="25" width="1440" height="875" />
     </state>
