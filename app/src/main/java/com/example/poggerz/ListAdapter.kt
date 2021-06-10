@@ -16,7 +16,7 @@ class ListAdapter(private val itemList: List<Item>,
 
     //inner class to handel our item holder
     inner class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val labelView: TextView = itemView.tv_label
+        val labelView: TextView = itemView.textView_name
 
 
     }

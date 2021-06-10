@@ -136,4 +136,16 @@
         android:text="Save"
         android:layout_marginTop="10dp"/>
 
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:textStyle="bold"
+        android:textColor="@color/own_white"
+        android:backgroundTint="@color/pink"
+        android:text="Logout"
+        android:layout_marginTop="10dp"/>
+
 </LinearLayout>

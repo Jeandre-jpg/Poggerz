@@ -1,6 +1,5 @@
 package com.example.poggerz
 
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -13,7 +12,7 @@ class SettingsActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_settings)
+        setContentView(R.layout.fragment_profile)
 
         val settingsFragment = SettingsFragment()
 

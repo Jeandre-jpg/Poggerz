@@ -75,7 +75,7 @@ class ChatActivity : AppCompatActivity() {
             val content = et_new_note.text.toString()
             val message = Chats(content, "")
 
-          Firestore().saveMessage(this, message, chatId)
+          Firestore.saveMessage(this, message, chatId)
 
             et_new_note.text.clear()
         }
@@ -104,7 +104,7 @@ class ChatActivity : AppCompatActivity() {
 
 
     fun subscribeToChatsUpdates() {
-        messagesdb.document(chatId).collection("messages").orderBy("timestamp").addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
+        messagesdb.document(chatId).collection("messages").orderBy("timestamp").limit(50).addSnapshotListener { querySnapshot: QuerySnapshot?, error: FirebaseFirestoreException? ->
             error?.let {
                 Toast.makeText(this, error?.message, Toast.LENGTH_SHORT).show()
                 return@addSnapshotListener
@@ -122,7 +122,7 @@ class ChatActivity : AppCompatActivity() {
 
                 }
 
-
+                messagesList.sortByDescending { chatId }
                 rv_notes.layoutManager = LinearLayoutManager(this)
                 val adapter = MessagesAdapter(messagesList)
                 rv_notes.adapter = adapter

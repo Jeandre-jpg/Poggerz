@@ -68,12 +68,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.chats -> {
                 setToolbarTitle("Chats")
-                changeFragment(ChatsFragment())
+                changeFragment(IndividualsFragment())
             }
 
             R.id.groups -> {
                 setToolbarTitle("Groups")
-                changeFragment(GroupsFragment())
+                changeFragment(ChatsFragment())
             }
 
             R.id.logout -> {

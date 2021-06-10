@@ -8,7 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.poggerz.ChatActivity
+import com.example.poggerz.LoadingActivity
 import com.example.poggerz.R
+import com.example.poggerz.TestActivity
+import kotlinx.android.synthetic.main.activity_splash.*
 import kotlinx.android.synthetic.main.fragment_individuals.*
 import kotlinx.android.synthetic.main.fragment_individuals.view.*
 
@@ -32,45 +35,29 @@ class IndividualsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btn_one.setOnClickListener {
-            Log.d("Test Button", "Button one clicked")
-            activity?.let {
-                val intent = Intent(it, ChatActivity::class.java)
-                it.startActivity(intent)
-            }
-
+        btn_one.setOnClickListener{
+            val intent = Intent (getActivity(), ChatActivity::class.java)
+            requireActivity().startActivity(intent)
         }
 
-        btn_two.setOnClickListener {
-            activity?.let {
-                val intent = Intent(it, ChatActivity::class.java)
-                it.startActivity(intent)
-            }
-
+        btn_two.setOnClickListener{
+            val intent = Intent (getActivity(), ChatActivity::class.java)
+            requireActivity().startActivity(intent)
         }
 
-        btn_three.setOnClickListener {
-            activity?.let {
-                val intent = Intent(it, ChatActivity::class.java)
-                it.startActivity(intent)
-            }
-
+        btn_three.setOnClickListener{
+            val intent = Intent (getActivity(), ChatActivity::class.java)
+            requireActivity().startActivity(intent)
         }
 
-        btn_four.setOnClickListener {
-            activity?.let {
-                val intent = Intent(it, ChatActivity::class.java)
-                it.startActivity(intent)
-            }
-
+        btn_four.setOnClickListener{
+            val intent = Intent (getActivity(), ChatActivity::class.java)
+            requireActivity().startActivity(intent)
         }
 
-        btn_five.setOnClickListener {
-            activity?.let {
-                val intent = Intent(it, ChatActivity::class.java)
-                it.startActivity(intent)
-            }
-
+        btn_five.setOnClickListener{
+            val intent = Intent (getActivity(), ChatActivity::class.java)
+            requireActivity().startActivity(intent)
         }
     }
 }
